@@ -6,7 +6,7 @@ import img1 from './assets/img/1.png';
 import img2 from './assets/img/2.png';
 import img3 from './assets/img/3.png';
 import img4 from './assets/img/4.png';
-import img5 from './assets/img/img1.png';
+import img5 from './assets/img/img1.jpg';
 import img6 from './assets/img/img2.png';
 import img7 from './assets/img/img3.png';
 import img8 from './assets/img/img4.png';
@@ -45,17 +45,18 @@ function App() {
 
           </div>
 
-          <div className="mascota">
-           <img className="robot" src={mascota}/>
-          </div>
-
-        </div>
-        <div className="section2">
           <div className="Texto">
             <h3>Titulo del Texto </h3>
 
             <p>Parrafo a ser definido</p>
           </div>
+
+        </div>
+        <div className="section2">
+        <div className="mascota">
+           <img className="robot" src={mascota}/>
+          </div>
+          
 
         </div>
 

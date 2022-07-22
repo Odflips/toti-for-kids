@@ -5,22 +5,27 @@
 }
 
 .cabeçalho{
-  height: 100px;
+  height: 120px;
   display: flex;
-  
-
-  background: rgb(249,251,251);
-  background: linear-gradient(90deg, rgba(249,251,251,1) 29%, rgba(73,45,115,1) 69%);
+  background-image:linear-gradient(
+      115deg,
+      rgba(54,54,54, 0.8),
+      rgba(136, 136, 206, 0.4)
+    ),
+    url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg
+    );
   align-items: center;
   justify-content: space-around;
+  border-bottom: 0.4px solid black;
 }
 
 .cabeçalho a{
-  border: 1px solid white;
+  border: 1px solid rgb(8, 5, 5);
   border-radius: 5px;
   padding: 3px 6px;
   font-size: 20px;
-  
+  box-shadow: 7px 7px 20px rgba(0,0,0,0.8);;
+  background-color: rgb(121, 45, 165);
 }
 
 .login{
@@ -40,21 +45,19 @@
 
 
 body{
-  background-color: #4158D0;
-background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-color: #00DBDE;
+background-image: linear-gradient(276deg, #00DBDE 0%, #FC00FF 100%);
+
 
 }
 
-.main{
-  border-top: 0.4px solid black;
-  
-  
- 
 
-}
 
 a{
-  color: white;
+  color: rgb(0, 0, 0);
+  
+  
+  
 }
 
 .Section{
@@ -69,10 +72,12 @@ a{
 
 .video1{
   border-radius: 30px;
+  box-shadow: 7px 7px 20px rgba(0,0,0,0.8);
 }
 
 .robot{
   height: 300px;
+  
 }
 
 
@@ -83,8 +88,10 @@ a{
   margin-left: 550px;
   margin-top: 100px;
   text-align: center;
-  background-color: rgba(73,45,115,1);
-  box-shadow: 5px 5px 20px rgba(0,0,0,1);
+ 
+ 
+
+
   padding: 10px 20px;
   border-radius: 30px;
   
@@ -197,12 +204,19 @@ input{
   display: flex;
   margin-top: 100px;
   border-top: 0.4px solid black;
-  
-
-  background: rgb(249,251,251);
-  background: linear-gradient(90deg, rgba(249,251,251,1) 40%, rgba(73,45,115,1) 69%);
+  background-color: #3d3b9b;
   align-items: center;
   justify-content: space-around;
+
+  background-image:linear-gradient(
+      115deg,
+      rgba(54,54,54, 0.8),
+      rgba(136, 136, 206, 0.4)
+    ),
+    url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg
+    );
+
+
 
 }
 
@@ -216,6 +230,7 @@ input{
 .soc-img{
   height: 70px;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 
