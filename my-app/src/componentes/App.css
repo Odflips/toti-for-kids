@@ -72,12 +72,24 @@ a{
   gap: 25px;
   width: 90%;
   margin-left: 4em;
+  text-shadow: 0px 0.5px 5px rgba(0,0,0,5);
+  color: white;
+  font-size: 20px;
+
+  
 }
 
 .video1{
   border-radius: 30px;
   box-shadow: 7px 7px 20px rgba(0,0,0,0.8);
 }
+
+h2{
+  text-shadow: 0px 0.5px 5px rgba(0,0,0,5);
+  color: white;
+  font-size: 20px;
+}
+
 
 .robot{
   height: 300px;
