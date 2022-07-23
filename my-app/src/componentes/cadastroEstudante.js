@@ -11,7 +11,7 @@ const CadastroEstudante = () => {
       
      
 
-          <div className="loginE">
+          <div className="loginE3">
           <form>
             <div className="completarformulario">
               <h3>Complete o Formulário e junte-se a nós</h3>
@@ -85,17 +85,20 @@ const CadastroEstudante = () => {
               Cadastrarse
             </button>
 
+            <div className="texto-fundo">
+
              <p className="criar-conta-termos">Seus dados estão seguros conosco. Usaremos seu número de telefone apenas para compartilhar informações do programa e links de classe. Ao me registrar aqui, eu concordo com os Termos e Condições e Política de Privacidade da TOTI for Kids </p>
-               
+             </div>
            
               
           </form>
          
           
           </div>
-        <Footer />
+        
          
    </Container>
+   <Footer />
          </div>
     )
 } 

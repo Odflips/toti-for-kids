@@ -2,7 +2,7 @@ import React from "react";
 import { Container,FormControl,FormGroup} from "react-bootstrap"
 import { Link } from "react-router-dom";
 import "./style.css"
-import Footer from "./footer"
+import Footer from "./footer.js"
 
 
 const LoginEstudante =() =>{
@@ -22,9 +22,9 @@ const LoginEstudante =() =>{
               
            
           
-             <hr  />
              
-             <form>
+             
+             <form className="sem-conta">
              
 
                 <FormGroup className="mb-2 ">
@@ -74,9 +74,10 @@ const LoginEstudante =() =>{
                <span>Telefone +5511473980.</span>
              </div>
              
-           <Footer />
+           
             
       </Container>
+      <Footer />
             </div>
     )
 }

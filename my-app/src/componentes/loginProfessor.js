@@ -1,5 +1,6 @@
 import React from "react"
 import "./style.css"
+import "./App.css"
 import Footer from "./footer"
 import { Container,FormGroup,FormControl } from "react-bootstrap"
 
@@ -9,7 +10,14 @@ const LoginProfessor = () =>{
        <div>
        
         <Container  className="bodyLoginP">
-            <div className="loginE">
+            <div className="loginE2">
+            <div>
+                <h1 className="titulo">Sign in</h1>
+               
+                <p className="subtitulo">Transforme o Mundo</p>
+             
+              </div>
+              
 
            
            <form>
@@ -46,15 +54,17 @@ const LoginProfessor = () =>{
                 />
                 </FormGroup>
                 <br />
-               <button  className="loginBtn">
+               <button  className="loginBtn2">
                   Fazer Login
                </button>
 
            </form>
            </div>
-         <Footer />
+         
         </Container>
-       
+
+        
+        <Footer />
       
        </div>
    )

@@ -1,11 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
 body{
     box-sizing: border-box;
    font-family: sans-serif;
    margin: 0%;
+   padding: 0;
   }
 .loginE{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     justify-items: flex-end;
     width: 100%;
     border-radius: 8px;
@@ -18,16 +24,57 @@ body{
    
   }
   
+  .loginE2{
+    display: flex;
+    justify-content: space-around;
+    justify-items: flex-end;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 12px rgba(125, 14, 168, 0.219);
+    padding: 24px 32px 32px 32px;
+    margin:  30px auto;
+  
+    color: darkslategray;
+  }
+  .loginE3{
+    display: flex;
+    justify-content: space-around;
+    justify-items: flex-end;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 10px 12px rgba(125, 14, 168, 0.219);
+    padding: 24px 32px 32px 32px;
+    margin:  30px auto;
+  
+    color: darkslategray;
+
+  }
+
+
   .loginBtn{ 
     background-color:coral;
     color: #ffffff;
     border: none;
-    border-radius: 28px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: 600;
     line-height: 52px;
     margin-top: 16px;
    margin-left: 100px;
+   width: 100px;
+  }
+
+  .loginBtn2{
+    background-color:coral;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 52px;
+    margin-top: 16px;
+   margin-left: 100px;
+   width: 100px;
   }
   
   .loginCadastro{
@@ -42,7 +89,7 @@ body{
     font-weight: 600;
     line-height: 40px;
     width: 30%;
-    margin-left: 10rem;
+    margin-left: 270px;
     
   }
   .input{
@@ -76,7 +123,11 @@ body{
     align-items: center;
     justify-content: center;
     padding: 20px 40px;
-    margin-right: 25rem;
+    width: 800px;
+    margin-left: 500px;
+    text-align: center;
+
+    
   }
   
   .bodyLoginP{
@@ -85,12 +136,13 @@ body{
     align-items: center;
     justify-content: center;
     padding: 10px 30px;
-    margin-right: 250rem;
-    width: 30%;
+    width: 800px;
+    margin-left: 500px
+    
   }
 
   .faleconosco{
-  
+    
     text-align: center;
     width: 300px;
     border-radius: 8px;
@@ -137,14 +189,82 @@ body{
   
   }
 
-.footer{
- 
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    max-width:1110px;
-    margin: 80px 0 0;
-    font-size: 12px;
-    padding: 5px;
+  .texto-fundo{
+    margin-top: 100px;
+  }
 
-}
+  @media screen and (max-width: 800px){
+
+    .bodyLoginE{
+      margin-left: 0;
+      width: 280px;
+      
+      
+    }
+
+    .bodyLoginP{
+      margin-left: 0;
+      width: 280px;
+      
+    }
+
+    .loginE{
+
+      height: 400px;
+      width: 300px;
+      margin-left: -34px;
+
+      
+      
+    }
+
+    .loginE2{
+      margin-left: -26px;
+      width: 300px;
+    
+    }
+
+    .loginE3{
+      margin-left: -26px;
+      width: 300px;
+      height: 600px;
+    
+    }
+
+
+
+    .bodyLoginP{
+      margin-left: 0;
+    }
+
+
+    .loginBtn{
+      margin-left: -70px;
+    }
+    .loginBtn2{
+      margin-left: 25px;
+      
+    }
+
+    .sem-conta p{
+      margin-right: 70px;
+      
+    }
+
+    .bodyLoginP{
+      margin-left: 0;
+    }
+
+    .faleconosco{
+      margin-left: -34px;
+    }
+
+   
+
+   .loginCadastro{
+    margin-left: 110px;
+    width: 100px;
+   }
+
+
+  }
