@@ -104,8 +104,8 @@ h2{
 .sectionprincipal{
   display: flex;
   height: 300px;
-  width: 50%;
-  margin-left: 1000px;
+  width: 100px;
+  margin-left: 50%;
   margin-top: 20px;
   text-align: center;
   padding: 10px 20px;
@@ -193,6 +193,63 @@ h2{
   border-radius: 20px;
 }
 
+.dashP{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 50px;
+  text-align: center;
+}
+
+.alunos{
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 12px rgba(125, 14, 168, 0.219);
+  
+  
+}
+
+.img-txt{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  
+  
+  
+}
+
+.aluno-img{
+  height: 100px;
+ 
+  border-radius: 50%;
+}
+
+.BtnProf{
+  position: relative;
+  top: 30px;
+  left: 50px;
+  justify-content: space-around;
+  display: flex;
+  width: 200px;
+  margin-left: -50px;
+  
+  
+}
+
+.btnProf{
+  height: 40px;
+  width: 80px;
+  background-color: coral;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 800px){
 
   .cabeçalho a{
@@ -254,4 +311,40 @@ h2{
     height: 50px;
     margin-left: 10px;
   }
+
+  .alunos{
+    text-align:start;
+    height: 200px;
+    margin-left: 10px;
+    gap: 20px;
+    font-size: 14px;
+   
+    
+    
   }
+
+  .img-txt{
+    font-size: 11px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+  }
+  
+  .aluno-img{
+    height: 100px;
+    
+
+  }
+  
+  .BtnProf{
+    left: -1px;
+    top: 60px;
+    gap: 10px;
+    
+    
+  }
+  
+}

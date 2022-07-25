@@ -7,7 +7,7 @@ import Footer from "./footer.js"
 
 const LoginEstudante =() =>{
     return (
-        <div>
+        <div className="conteiner">
            
            <Container className="bodyLoginE"> 
          

@@ -7,7 +7,7 @@ import { Container,FormGroup,FormControl } from "react-bootstrap"
 
 const LoginProfessor = () =>{
    return(
-       <div>
+       <div className="conteiner">
        
         <Container  className="bodyLoginP">
             <div className="loginE2">
@@ -55,7 +55,7 @@ const LoginProfessor = () =>{
                 </FormGroup>
                 <br />
                <button  className="loginBtn2">
-                  Fazer Login
+               Fazer Login
                </button>
 
            </form>
