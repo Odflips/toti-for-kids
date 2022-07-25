@@ -2,6 +2,7 @@ import React from "react"
 import "../video/text"
 
 
+
 const VideoText =()=>{
     return(
         
@@ -12,8 +13,8 @@ const VideoText =()=>{
         </div>
 
         <div className="Texto">
-          <h3>Promovemos um relacionamento mais inteligente das crianças 
-            com a tecnologia</h3>
+          <h2>Promovemos um relacionamento mais inteligente das crianças 
+            com a tecnologia</h2>
             <br />
 
           <p>

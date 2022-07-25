@@ -16,6 +16,7 @@
     );*/
   align-items: center;
   justify-content: space-around;
+  background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-space-universe-banner-background-universetechnology-backgroundgradient-backgroundgradual-image_54068.jpg);
  
 }
 
@@ -25,7 +26,8 @@
   padding: 3px 6px;
   font-size: 20px;
   box-shadow: 7px 7px 20px rgba(0,0,0,0.8);;
-  background-color: rgb(121, 45, 165);
+  background-color: coral;
+  
 }
 
 .login{
@@ -46,10 +48,8 @@
 
 
 body{
-  background-color:;
-background-image: linear-gradient(276deg, #19888a 0%, #FC00FF 100%);
-
-
+background-color:#0e0234;
+background-image: linear-gradient(276deg,#0e0234,#0e0234 100%);
 }
 
 
@@ -72,6 +72,11 @@ a{
   gap: 25px;
   width: 90%;
   margin-left: 4em;
+  text-shadow: 0px 0.5px 5px rgba(0,0,0,5);
+  color: white;
+  font-size: 20px;
+
+  
 }
 
 .video1{
@@ -79,12 +84,21 @@ a{
   box-shadow: 7px 7px 20px rgba(0,0,0,0.8);
 }
 
+h2{
+  text-shadow: 0px 0.5px 5px rgba(0,0,0,5);
+  color: white;
+  font-size: 20px;
+}
+
+
 .robot{
-  height: 250px;
+  height: 300px;
   
 }
 .robotPrincipal{
-  height: 100px;
+  height: 200px;
+  
+  
 }
 
 .sectionprincipal{
@@ -140,99 +154,26 @@ a{
   cursor: pointer;
 }
 
-.conteudo{
-  height: 500px;
-  width: 900px;
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  top: 90px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 7px 7px 20px rgba(0,0,0,0.8);
-
-}
-
-.navigation{
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%);
-  display: flex;
-}
-
-.bar{
-  width: 70px;
-  height: 17px;
-  border: 2px solid rgb(5, 0, 0);
-  margin: 6px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.6s;
-}
-
-.bar:hover{
-  background-color: rgb(5, 0, 0);
-}
-
-input{
-  display: none;
-}
-
-.slides{
-  display: flex;
-  width: 500%;
-  height: 100%;
-
-
-}
-
-.slide{
-  width: 20%;
-  transition: 1s;
-}
-
-.slide img{
-  width: 100%;
-  height: 100%;
-}
-
-#slide1:checked ~ .s1 {
-  margin-left: 0%;
-}
-
-.slide2:checked ~ .s1 {
-  margin-left: -20%;
-}
-
-#slide3:checked ~ .s1 {
-  margin-left: -40%;
-}
-
-#slide4:checked ~ .s1 {
-  margin-left: -60%;
-}
-#slide5:checked ~ .s1 {
-  margin-left: -80%;
-}
 
 
 .footer{
   height: 200px;
   display: flex;
-  margin-top: 100px;
-  background-color: #3d3b9b;
+  flex-direction: row;
+  margin-top: 200px;
   align-items: center;
+ /* HEAD*/
   justify-content: space-around;
- /* background-color:indigo;*/
-  background-image:linear-gradient(
+  gap: 80px;
+  justify-content: center;
+  background-color: #03294e;
+  
+    /*url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg
+    linear-gradient(
       115deg,
       rgba(54,54,54, 0.8),
       rgba(136, 136, 206, 0.4)
-    ),
-    url(https://image.shutterstock.com/image-illustration/modern-mockup-blue-display-abstract-600w-1925935925.jpg);
-    /*url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg*/
-   
+    ),*/
     background-repeat: no-repeat;
 
 
@@ -252,4 +193,65 @@ input{
   border-radius: 20px;
 }
 
+@media screen and (max-width: 800px){
 
+  .cabeçalho a{
+    font-size: 15px;
+  }
+
+  .sectionprincipal{
+    margin-left: 10px;
+    
+  }
+
+  .video1{
+    height: 215px;
+    width: 320px;
+
+  }
+
+  .Section{
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  .robotPrincipal{
+    height: 200px;
+    margin-left: 30px;
+  }
+
+  .robot{
+    margin-left: 30px;
+  }
+
+  .cursoimg{
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .cursos{
+    flex-direction: column;
+  }
+
+  .section2{
+    flex-direction: column;
+    margin-left: 30px;
+  }
+
+  .textofinal{
+    font-size: 15px;
+  }
+
+  .footer{
+    gap: 10px;
+  }
+  
+  .social{
+    width: 200px;
+  }
+
+  .soc-img{
+    height: 50px;
+    margin-left: 10px;
+  }
+  }
