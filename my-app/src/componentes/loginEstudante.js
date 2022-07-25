@@ -32,7 +32,8 @@ const LoginEstudante =() =>{
                       className="input"
                       type="text"
                       name="username"
-                      placeholder="Usuario"
+                  placeholder="Usuario"
+                  required
                     />
 
                 </FormGroup>
@@ -44,6 +45,7 @@ const LoginEstudante =() =>{
                   type="text"
                   name="password"
                   placeholder="Senha"
+                  required
                 />
                
                 

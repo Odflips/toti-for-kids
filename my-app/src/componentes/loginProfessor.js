@@ -27,7 +27,8 @@ const LoginProfessor = () =>{
                       className="input"
                       type="text"
                       name="username"
-                      placeholder="Usuario"
+                 placeholder="Usuario"
+                 required
                     />
 
                 </FormGroup>
@@ -38,7 +39,8 @@ const LoginProfessor = () =>{
                    className="input"
                   type="text"
                   name="password"
-                  placeholder="Senha"
+                 placeholder="Senha"
+                 required
                 />
                
                 
@@ -50,7 +52,8 @@ const LoginProfessor = () =>{
                    className="input"
                   type="text"
                   name="curso"
-                  placeholder="curso"
+                 placeholder="curso"
+                 required
                 />
                 </FormGroup>
                 <br />
