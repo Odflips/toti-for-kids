@@ -1,0 +1,344 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: 0;
+}
+
+.cabeçalho{
+  height: 120px;
+  display: flex;
+  background-image:linear-gradient(
+      115deg,
+      rgba(54,54,54, 0.8),
+      rgba(136, 136, 206, 0.4)
+    ),
+    url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg
+    );
+  align-items: center;
+  justify-content: space-around;
+ 
+}
+
+.cabeçalho a{
+  border: 1px solid rgb(8, 5, 5);
+  border-radius: 5px;
+  padding: 3px 6px;
+  font-size: 20px;
+  box-shadow: 7px 7px 20px rgba(0,0,0,0.8);;
+  background-color: coral;
+}
+
+.login{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+}
+ 
+
+
+
+.img{
+  height: 100px;
+  border-radius: 50%;
+ 
+}
+
+
+body{
+  background-color: #00DBDE;
+background-image: linear-gradient(276deg, #00DBDE 0%, #FC00FF 100%);
+
+
+}
+
+
+
+a{
+  color: rgb(0, 0, 0);
+  
+  
+  
+}
+
+.Section{
+  
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 5px;
+  gap: 25px;
+  width: 90%;
+  margin-left: 4em;
+  text-shadow: 0px 0.5px 5px rgba(0,0,0,5);
+  color: white;
+  font-size: 20px;
+
+  
+}
+
+.video1{
+  border-radius: 30px;
+  box-shadow: 7px 7px 20px rgba(0,0,0,0.8);
+}
+
+h2{
+  text-shadow: 0px 0.5px 5px rgba(0,0,0,5);
+  color: white;
+  font-size: 20px;
+}
+
+
+.robot{
+  height: 300px;
+  
+}
+.robotPrincipal{
+  height: 200px;
+  
+  
+}
+
+.sectionprincipal{
+  display: flex;
+  height: 300px;
+  width: 100px;
+  margin-left: 50%;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 30px;
+  gap: 10px;
+}
+
+.section2{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 150px;
+  gap: 25px;
+  width: 90%;
+  margin-left: 4em;
+
+
+  
+  
+}
+
+.cursos{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+
+.cursos1{
+  text-align: center;
+}
+
+.text{
+  text-shadow: 0px 0.5px 5px rgba(0,0,0,5);
+  color: white;
+  font-size: 30px;
+}
+
+.cursoimg{
+  border-radius: 30px;
+  height: 200px;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.8);
+  cursor: pointer;
+}
+
+
+
+.footer{
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 200px;
+  align-items: center;
+  gap: 80px;
+  justify-content: center;
+  background-image:linear-gradient(
+      115deg,
+      rgba(54,54,54, 0.8),
+      rgba(136, 136, 206, 0.4)
+    ),
+    url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg
+    );
+
+
+
+}
+
+.social{
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.soc-img{
+  height: 70px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.dashP{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 50px;
+  text-align: center;
+}
+
+.alunos{
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 12px rgba(125, 14, 168, 0.219);
+  
+  
+}
+
+.img-txt{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  
+  
+  
+}
+
+.aluno-img{
+  height: 100px;
+ 
+  border-radius: 50%;
+}
+
+.BtnProf{
+  position: relative;
+  top: 30px;
+  left: 50px;
+  justify-content: space-around;
+  display: flex;
+  width: 200px;
+  margin-left: -50px;
+  
+  
+}
+
+.btnProf{
+  height: 40px;
+  width: 80px;
+  background-color: coral;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 800px){
+
+  .cabeçalho a{
+    font-size: 15px;
+  }
+
+  .sectionprincipal{
+    margin-left: 10px;
+    
+  }
+
+  .video1{
+    height: 215px;
+    width: 320px;
+
+  }
+
+  .Section{
+    flex-direction: column;
+    margin-left: 20px;
+  }
+
+  .robotPrincipal{
+    height: 200px;
+    margin-left: 30px;
+  }
+
+  .robot{
+    margin-left: 30px;
+  }
+
+  .cursoimg{
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  .cursos{
+    flex-direction: column;
+  }
+
+  .section2{
+    flex-direction: column;
+    margin-left: 30px;
+  }
+
+  .textofinal{
+    font-size: 15px;
+  }
+
+  .footer{
+    gap: 10px;
+  }
+  
+  .social{
+    width: 200px;
+  }
+
+  .soc-img{
+    height: 50px;
+    margin-left: 10px;
+  }
+
+  .alunos{
+    text-align:start;
+    height: 200px;
+    margin-left: 10px;
+    gap: 20px;
+    font-size: 14px;
+   
+    
+    
+  }
+
+  .img-txt{
+    font-size: 11px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+  }
+  
+  .aluno-img{
+    height: 100px;
+    
+
+  }
+  
+  .BtnProf{
+    left: -1px;
+    top: 60px;
+    gap: 10px;
+    
+    
+  }
+  
+}
