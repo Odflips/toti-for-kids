@@ -26,9 +26,9 @@ export default function DisplayCourse() {
             <div className="container">
 
                 <h2>{item.name}</h2>
-                <h3>{item.address}</h3>
-                <p> {item.phone}</p>
-                <img src={item.img} alt={item.name} width="30px" className="img-fluid" />
+                <h3>{item.hours}</h3>
+                <p> {item.activity}</p>
+                <img src={`${item.imagen}`} alt={item.name} width="30px" className="img-fluid" />
             </div>
 
         ))

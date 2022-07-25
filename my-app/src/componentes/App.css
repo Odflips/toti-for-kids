@@ -244,6 +244,72 @@ h2{
   border-radius: 10px;
 }
 
+
+.directory_menu {
+  border: 1px solid #D3BBDD;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: #EFE7D3;
+  text-align: center;
+}
+
+.directory_menu button {
+  padding: 10px;
+  font-weight: 900;
+  box-shadow: 0 0 20px #202927;
+}
+
+.directory_menu button:hover {
+  background-color: #D3BBDD;
+}
+
+.grid .information div {
+  background-color: #EFE7D3;
+  box-shadow: 0 0 20px #F8C0C8;
+  padding: 15px;
+  border: 1px solid #F8C0C8;
+}
+
+.list .information div {
+  border-bottom: 1px solid #F8C0C8;
+  ;
+  padding: 15px;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid .information {
+  flex-direction: column;
+  text-align: center;
+}
+
+.grid .information>* {
+  margin: 5px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.list .information img,
+.list .information .courses_details,
+.list .information .web_courses {
+  display: none;
+}
+
+.list .information div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+  align-items: center;
+}
 @media screen and (max-width: 800px){
 
   .cabeçalho a{
