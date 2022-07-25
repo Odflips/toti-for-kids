@@ -5,9 +5,9 @@ import "./style.css"
 
 const CadastroEstudante = () => {
     return(
-        <div>
+        <div className="conteiner">
           
-        <Container className="bodyLoginE "> 
+        <Container className="bodyLoginE2 "> 
       
      
 

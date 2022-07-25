@@ -11,6 +11,7 @@ import LoginProfessor from "../../componentes/loginProfessor";
 import NavBar from "../../componentes/Navbar";
 import LoginEstudante from "../../componentes/loginEstudante";
 import CadastroEstudante from "../../componentes/cadastroEstudante";
+import DashboardProf from "../../componentes/dashboardProf";
 
    const Router = ()=>{
     return (
@@ -22,6 +23,7 @@ import CadastroEstudante from "../../componentes/cadastroEstudante";
        <Route exact path ="/professor" element = {<LoginProfessor /> }/>
        <Route exact path ="/estudante" element = {<LoginEstudante /> }/>
        <Route exact path ="/cadastroEstudante" element = {<CadastroEstudante /> }/>
+       <Route exact path ="/dashboardProf" element = {<DashboardProf /> }/>
 
 
 
