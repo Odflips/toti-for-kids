@@ -50,7 +50,7 @@ const LoginEstudante =() =>{
                </FormGroup>
                <br/>
                <button  className="loginBtn">
-                  Fazer Login
+                <Link to="/card">Fazer Login </Link> 
                </button>
 
                 <p className="criar-conta"> Não tem uma conta? <Link to="/cadastroEstudante">Inscrever-se agora </Link></p>
