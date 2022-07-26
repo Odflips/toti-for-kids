@@ -32,7 +32,8 @@ const LoginEstudante =() =>{
                       className="input"
                       type="text"
                       name="username"
-                      placeholder="Usuario"
+                  placeholder="Usuario"
+                  required
                     />
 
                 </FormGroup>
@@ -44,13 +45,14 @@ const LoginEstudante =() =>{
                   type="text"
                   name="password"
                   placeholder="Senha"
+                  required
                 />
                
                 
                </FormGroup>
                <br/>
                <button  className="loginBtn">
-                  Fazer Login
+                <Link to="/card">Fazer Login </Link> 
                </button>
 
                 <p className="criar-conta"> Não tem uma conta? <Link to="/cadastroEstudante">Inscrever-se agora </Link></p>

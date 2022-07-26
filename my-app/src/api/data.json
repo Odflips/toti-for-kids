@@ -1,0 +1,69 @@
+{
+  "card": [
+    {
+      "id": "263",
+      "name": "Introdução a HTML/CSS",
+      "hours": "72 Hrs",
+      "activity": "Aprenda a usar HTML e CSS para criar páginas web. HTML é a linguagem de marcação. CSS é a linguagem de estilos que você usa para estilizar a página.",
+      "price": "R$ 120",
+      "imagen": "https://www.imaginanet.com/thumb.php?n=blog%2F10herramientas.jpg&w=640&h=250&x=0&y=0"
+    },
+     {
+      "id": "273",
+      "name": "Python para Análise e Visualização de Dados",
+      "hours": "240 Hrs",
+      "activity": "Aprenda a trabalhar com vários formatos de dados em python, incluindo: planilhas JSON,HTML e MS Excel.",
+      "price": "R$ 320",
+      "imagen": "https://img-b.udemycdn.com/course/240x135/396876_cc92_7.jpg"
+    },
+     {
+      "id": "283",
+      "name": "REACT",
+      "hours": "480 Hrs",
+      "activity": "Torne-se um Desenvolvedor React Sênior. Crie um aplicativo de comércio eletrônico massivo com Redux, Hooks, GraphQL, Stripe, Firebase.",
+      "price": "R$ 500",
+      "imagen": "https://conexaopanvel.faccat.br/wp-content/uploads/2020/06/1_vHHBwcUFUaHWXntSnqKdCA.png"
+    },
+     {
+      "id": "293",
+      "name": "Curso Completo de JavaScript: Do Zero ao Especialista!",
+      "hours": "240 Hrs",
+      "activity": "Fundamentos JavaScript: variáveis, if/else, operadores, lógica booleana, funções, arrays, objetos, loops, strings, etc.",
+      "price": "R$ 280",
+      "imagen": "https://sujeitoprogramador.com/wp-content/uploads/2019/08/jsjsjs.png"
+    },
+     {
+      "id": "363",
+      "name": "Introdução à Programação",
+      "hours": "120 Hrs",
+      "activity": "Aprender a programar, fundamentos de programação, Diagramas de Flujo e Pseudocódigos, Lógica de Programação desde cero.",
+      "price": "R$ 220",
+      "imagen": "https://blog.facialix.com/wp-content/uploads/2021/03/logica-programacion-facialix.jpg"
+    },
+     {
+      "id": "536",
+      "name": "SQL para iniciantes",
+      "hours": "480 Hrs",
+      "activity": "Entenda o SQL usando o banco de dados MySQL. Aprenda design de banco de dados e análise de dados com normalização e relacionamentos.",
+      "price": "R$ 450",
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png"
+    },
+     {
+      "id": "723",
+      "name": "PHP para iniciantes",
+      "hours": "240 Hrs",
+      "activity": "ACrie um sistema de gerenciamento de conteúdo do zero com PHP e MySQL.",
+      "price": "R$ 320",
+      "imagen": "https://grldcxp3prmj.compat.objectstorage.sa-saopaulo-1.oraclecloud.com/icons-maxters/posts/cover/uploads/covers/php.png"
+    },
+     {
+      "id": "663",
+      "name": "Introdução ao Visual Basic com o Visual Studio",
+      "hours": "120 Hrs",
+      "activity": "Torne-se um mestre do Visual Basic - Não é necessária experiência em programação.",
+      "price": "R$ 120",
+      "imagen": "https://mspoweruser.com/wp-content/uploads/2020/03/visual-basic.png"
+    }
+    
+  ]
+}
