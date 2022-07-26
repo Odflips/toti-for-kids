@@ -7,13 +7,13 @@
 .cabeçalho{
   height: 120px;
   display: flex;
-  /*background-image:linear-gradient(
+  background-image:linear-gradient(
       115deg,
       rgba(54,54,54, 0.8),
       rgba(136, 136, 206, 0.4)
     ),
     url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg
-    );*/
+    );
   align-items: center;
   justify-content: space-around;
   background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-space-universe-banner-background-universetechnology-backgroundgradient-backgroundgradual-image_54068.jpg);
@@ -48,8 +48,14 @@
 
 
 body{
-background-color:#0e0234;
-background-image: linear-gradient(276deg,#0e0234,#0e0234 100%);
+  background-color: #8EC5FC;
+background-image: linear-gradient(45deg, #8EC5FC 0%, #E0C3FC 50%, #ffffff 85%);
+
+
+
+  
+
+
 }
 
 
@@ -68,7 +74,7 @@ a{
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin-top: 5px;
+  margin-top: -100px;
   gap: 25px;
   width: 90%;
   margin-left: 4em;
@@ -86,7 +92,7 @@ a{
 
 h2{
   text-shadow: 0px 0.5px 5px rgba(0,0,0,5);
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 20px;
 }
 
@@ -143,7 +149,7 @@ h2{
 
 .text{
   text-shadow: 0px 0.5px 5px rgba(0,0,0,5);
-  color: white;
+  color: rgb(12, 12, 12);
   font-size: 30px;
 }
 
@@ -162,19 +168,12 @@ h2{
   flex-direction: row;
   margin-top: 200px;
   align-items: center;
- /* HEAD*/
+ 
   justify-content: space-around;
   gap: 80px;
   justify-content: center;
-  background-color: #03294e;
-  
-    /*url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg
-    linear-gradient(
-      115deg,
-      rgba(54,54,54, 0.8),
-      rgba(136, 136, 206, 0.4)
-    ),*/
-    background-repeat: no-repeat;
+  background-image:
+    url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg)
 
 
 
@@ -250,19 +249,22 @@ h2{
   border-radius: 10px;
 }
 
-
+.container{
+  width: 500px;
+  
+}
 .directory_menu {
-  border: 1px solid #D3BBDD;
+  border: 1px solid #1c0725;
   padding: 5px;
   margin-top: 10px;
-  background-color: #EFE7D3;
+  background-color: coral;
   text-align: center;
 }
 
 .directory_menu button {
   padding: 10px;
   font-weight: 900;
-  box-shadow: 0 0 20px #202927;
+  
 }
 
 .directory_menu button:hover {
@@ -270,10 +272,10 @@ h2{
 }
 
 .grid .information div {
-  background-color: #EFE7D3;
-  box-shadow: 0 0 20px #F8C0C8;
+  color: rgb(8, 8, 8);
+  box-shadow: 0 10px 12px rgba(125, 14, 168, 0.219);
   padding: 15px;
-  border: 1px solid #F8C0C8;
+  
 }
 
 .list .information div {
@@ -284,15 +286,18 @@ h2{
 }
 
 .grid {
-  display: grid;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  
 }
 
 .grid .information {
   flex-direction: column;
   text-align: center;
 }
+
+
 
 .grid .information>* {
   margin: 5px;

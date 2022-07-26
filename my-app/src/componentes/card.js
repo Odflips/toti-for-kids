@@ -1,6 +1,7 @@
 import React from "react";
 import './App.css';
 import DisplayCourse from "../mapeoJson"
+import Footer from "./footer.js"
 
 
 
@@ -19,6 +20,7 @@ function CardCourses() {
                     < DisplayCourse />
                 </div>
             </article>
+            <Footer/>
         </div>
     );
 }
