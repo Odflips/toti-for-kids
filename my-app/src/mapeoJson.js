@@ -5,7 +5,7 @@ function cardCourse() {
     const [courses, setCourse] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:3004/card")
+        fetch('http://localhost:5000/card')
             .then(response => response.json())
             .then(datos => {
                 setCourse(datos)
@@ -24,11 +24,12 @@ export default function DisplayCourse() {
 
         card.map(item => (
             <div className="container">
-
+                <img src={item.imagen} alt={item.name} width="30px" className="img-fluid" />
                 <h2>{item.name}</h2>
                 <h3>{item.hours}</h3>
                 <p> {item.activity}</p>
-                <img src={`${item.imagen}`} alt={item.name} width="30px" className="img-fluid" />
+                <p> {item.price}</p>
+                
             </div>
 
         ))

@@ -4,6 +4,7 @@ import Footer from "./footer";
 import "./style.css"
 
 
+
 const CadastroEstudante = () => {
   return (
     <div className="conteiner">
@@ -82,6 +83,7 @@ const CadastroEstudante = () => {
                 type="text"
                 name="confirmpassword"
                 placeholder="confirme sua senha 8 [ a-z]"
+                
               />
 
 
