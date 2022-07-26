@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 
-function cardCourse() {
+/*const CardHook() {
 
     const [courses, setCourse] = useState([])
 
@@ -13,16 +13,25 @@ function cardCourse() {
     }, [])
 
     return courses
-}
+}*/
 
 export default function DisplayCourse() {
-
-    const card = cardCourse()
+  
+        
+        const [courses, setCourse] = useState([])
+    
+        useEffect(() => {
+            fetch('http://localhost:5000/card')
+                .then(response => response.json())
+                .then(datos => {
+                    setCourse(datos)
+                })
+        }, [])
 
     return (
 
 
-        card.map(item => (
+        courses.map(item => (
             <div className="container">
                 <img src={item.imagen} alt={item.name} width="30px" className="img-fluid" />
                 <h2>{item.name}</h2>
