@@ -23,8 +23,8 @@ export default function DisplayCourse() {
 
 
         card.map(item => (
-            <div className="container">
-                <img src={item.imagen} alt={item.name} width="30px" className="img-fluid" />
+            <div className="container2">
+                <img className="imgc" src={item.imagen} alt={item.name} width="30px" />
                 <h2>{item.name}</h2>
                 <h3>{item.hours}</h3>
                 <p> {item.activity}</p>
