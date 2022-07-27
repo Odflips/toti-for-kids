@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 
-/*const CardHook() {
+
+function cardCourse(){
 
     const [courses, setCourse] = useState([])
 
@@ -13,12 +14,13 @@ import React, { useEffect, useState } from "react"
     }, [])
 
     return courses
-}*/
+}
 
 export default function DisplayCourse() {
-  
+    const card = cardCourse()
+
         
-        const [courses, setCourse] = useState([])
+        /*const [courses, setCourse] = useState([])
     
         useEffect(() => {
             fetch('http://localhost:5000/card')
@@ -26,7 +28,7 @@ export default function DisplayCourse() {
                 .then(datos => {
                     setCourse(datos)
                 })
-        }, [])
+        }, [])*/
 
     return (
 
