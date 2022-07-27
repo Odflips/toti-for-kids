@@ -59,7 +59,7 @@ const LoginProfessor = () =>{
                 </FormGroup>
                 <br />
                <button  className="loginBtn2">
-                Fazer Login
+               <Link to="/dashboardProf">Fazer Login </Link> 
                </button>
 
            </form>
