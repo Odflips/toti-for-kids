@@ -3,7 +3,7 @@ import Footer from "./footer";
 import "./App.css"
 import Curso from '../assets/img/curso1.png';
 
-const dashboardProf= () => {
+const DashboardProf= () => {
     return(
         <div className="dashP">
 
@@ -57,4 +57,4 @@ const dashboardProf= () => {
 
     )
 } 
-export default dashboardProf;
+export default DashboardProf;
