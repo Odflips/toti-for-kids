@@ -84,9 +84,10 @@ a{
   gap: 25px;
   width: 90%;
   margin-left: 4em;
-  color: rgb(199, 165, 71);
-  font-size: 17px;
+  font-size: 13px;
   font-family: 'Mochiy Pop One', sans-serif;
+  text-shadow: 0px 0px 15px rgba(0,0,0,1);
+  color: #000000;
 
   
 }
@@ -368,7 +369,10 @@ h2{
 }
 
 .textofinal{
-  font-family: 'Abril Fatface', cursive;
+  font-size: 15px;
+  text-shadow: 0px 0px 15px rgba(0,0,0,1);
+  color: #ffffff;
+  font-family: 'Mochiy Pop One', sans-serif;
 }
 
 
