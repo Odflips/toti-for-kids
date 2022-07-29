@@ -53,60 +53,6 @@ routes.put('/:idCourse', (req, res) => {
     })
 })
 
-//Routes tabla estudantes
-
-routes.get('/', (req, res) => {
-    req.getConnection((err, conn) => {
-        if (err) return res.send(err)
-        conn.query('SELECT * FROM estudantes', (err, rows) => {
-            if (err) return res.send(err)
-            res.send(rows)
-
-        })
-    })
-})
-
-routes.post('/estudantes', (req, res) => {
-    req.getConnection((err, conn) => {
-        if (err) return res.send(err)
-
-        conn.query('INSERT INTO estudantes set ?', [req.body], (err, rows) => {
-            if (err) return res.send(err)
-
-            res.send('estudantes added')
-
-        })
-    })
-})
-
-
-routes.delete('/estudantes/:idEstudantes', (req, res) => {
-    req.getConnection((err, conn) => {
-        if (err) return res.send(err)
-
-        conn.query('DELETE FROM estudantes WHERE idEstudantes= ?', [req.params.idEstudantes], (err, rows) => {
-            if (err) return res.send(err)
-
-            res.send('estudantes delete')
-
-        })
-    })
-})
-
-routes.put('/estudantes/:idEstudantes', (req, res) => {
-    req.getConnection((err, conn) => {
-        if (err) return res.send(err)
-
-        conn.query('UPDATE estudantes set ? WHERE idEstudantes= ?', [req.body, req.params.idEstudantes], (err, rows) => {
-            if (err) return res.send(err)
-
-            res.send('estudantes update')
-
-        })
-    })
-})
-
-
 
 
 
