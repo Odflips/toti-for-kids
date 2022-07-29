@@ -15,11 +15,11 @@ const ListCourses = ({ detalhes_courses }) => {
             <tbody>
                 {detalhes_courses.map(course => (
                     <tr key={course.idCourse}>
-                        <th>{course.idCourse}</th>
-                        <th>{course.nome}</th>
-                        <th>{course.duracao}</th>
-                        <th>{course.detalhes}</th>
-                        <th>{course.price}</th>
+                        <td>{course.idCourse}</td>
+                        <td>{course.nome}</td>
+                        <td>{course.duracao}</td>
+                        <td>{course.detalhes}</td>
+                        <td>{course.price}</td>
                     </tr>
                 ))}
             </tbody>

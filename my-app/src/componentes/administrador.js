@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import ListCourse from './administrador/listCourses';
 import FormCourse from './administrador/formCourse';
-import ListEstudantes from './administrador/listEstudante';
+
 
 function Administrador() {
     //Conexion bd courses
@@ -24,20 +24,6 @@ function Administrador() {
         getCourses()
     }, []);
 
-//conexion bd estudiantes
-    const [estudantes, setEstudantes] = useState([])
-
-    
-
-
-    useEffect(() => {
-        const getEstudantes= () => {
-            fetch('http://localhost:3002/api/estudantes')
-                .then(res => res.json())
-                .then(res => setEstudantes(res))
-        }
-        getEstudantes()
-    }, [])
 
     return (
         <Fragment>
@@ -55,8 +41,7 @@ function Administrador() {
                     </div>
                     <div className='container'>
                         <h2 style={{ textAlign: "center" }}>Lista de Estudiantes Inscriptos</h2>
-                        <ListEstudantes estudantes={estudantes} />
-
+                        
                     </div>
                 </div>
             </div>
