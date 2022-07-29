@@ -13,7 +13,10 @@ const NavBar =() => {
           <img className="img" src={logo}/>
         </div>
 
-    <div className="login">
+        <div className="login">
+          <div className="Item-menu">
+            <Link to="/administrador" >Administrador</Link>
+          </div>
          <div className="Item-menu">
            <Link to="/estudante" >Estudante</Link>
         </div>
