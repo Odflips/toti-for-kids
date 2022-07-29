@@ -46,19 +46,19 @@ const FormCourse = ({ course, setCourse }) => {
         <form onSubmit={onSubmit}>
             <div className='mb-4'>
                 <label htmlFor='nomeCourse' className='form-label'>Nome do Curso</label>
-                <input name='nome' onChange={changeHandler} type='text' id='nomeCourse' className='form-control' />
+                <input value={nome} name='nome' onChange={changeHandler} type='text' id='nomeCourse' className='form-control' />
             </div>
             <div className='mb-4'>
                 <label htmlFor='duracaoCourse' className='form-label'>Duracao do Curso</label>
-                <input name='duracao' onChange={changeHandler} type='text' id='duracaoCourse' className='form-control' />
+                <input value={duracao } name='duracao' onChange={changeHandler} type='text' id='duracaoCourse' className='form-control' />
             </div>
             <div className='mb-4'>
                 <label htmlFor='detalhesCourse' className='form-label'>Detalhes do Curso</label>
-                <input name='detalhes' onChange={changeHandler} type='text' id='dethalesCourse' className='form-control' />
+                <input value={detalhes} name='detalhes' onChange={changeHandler} type='text' id='dethalesCourse' className='form-control' />
             </div>
             <div className='mb-4'>
                 <label htmlFor='priceCourse' className='form-label'>Price do Curso</label>
-                <input name='price' onChange={changeHandler} type='number' id='priceCourse' className='form-control' />
+                <input value={price} name='price' onChange={changeHandler} type='number' id='priceCourse' className='form-control' />
             </div>
             <button type='submit' className='btn btn-primary'>Submit</button>
         </form>
