@@ -14,13 +14,13 @@ const Footer = () =>{
              <a href="#"> <img className="soc-img" src={insta}/></a>
              <a href="#"> <img className="soc-img" src={face}/></a>
              <a href="#"> <img className="soc-img" src={whats}/></a>
-              <div >
+              <div className="text-foot" >
 
               <span>Toti For Kids</span>
               
               <br />
              
-             <span>Endereço: Rua Maria de feitas,455.Santos,SP</span>
+             <span href="https://goo.gl/maps/HrvM1XKv3GDwEMRz7">Endereço: Av. dos Bancários, 90 - Ponta da Praia.Santos,SP</span>
 
              </div>
              
