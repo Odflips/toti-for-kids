@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react"
 
+<<<<<<< HEAD
 
 function cardCourse(){
+=======
+function cardCourse() {
+>>>>>>> 4adfab6f75e7002ce7730d290a52ddde880bbc5f
 
     const [courses, setCourse] = useState([])
 
@@ -17,6 +21,7 @@ function cardCourse(){
 }
 
 export default function DisplayCourse() {
+<<<<<<< HEAD
     const card = cardCourse()
 
         
@@ -29,13 +34,17 @@ export default function DisplayCourse() {
                     setCourse(datos)
                 })
         }, [])*/
+=======
+
+    const card = cardCourse()
+>>>>>>> 4adfab6f75e7002ce7730d290a52ddde880bbc5f
 
     return (
 
 
-        courses.map(item => (
-            <div className="container">
-                <img src={item.imagen} alt={item.name} width="30px" className="img-fluid" />
+        card.map(item => (
+            <div className="container2">
+                <img className="imgc" src={item.imagen} alt={item.name} width="30px" />
                 <h2>{item.name}</h2>
                 <h3>{item.hours}</h3>
                 <p> {item.activity}</p>

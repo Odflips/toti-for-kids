@@ -3,6 +3,7 @@ import "./style.css"
 import "./App.css"
 import Footer from "./footer"
 import { Container,FormGroup,FormControl } from "react-bootstrap"
+import { Link } from "react-router-dom";
 
 
 const LoginProfessor = () =>{
@@ -58,7 +59,7 @@ const LoginProfessor = () =>{
                 </FormGroup>
                 <br />
                <button  className="loginBtn2">
-               Fazer Login
+               <Link to="/dashboardProf">Fazer Login </Link> 
                </button>
 
            </form>
