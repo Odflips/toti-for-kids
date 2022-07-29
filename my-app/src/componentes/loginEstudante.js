@@ -55,7 +55,7 @@ const LoginEstudante =() =>{
                 <Link to="/card">Fazer Login </Link> 
                </button>
 
-                <p className="criar-conta"> Não tem uma conta? <Link to="/cadastroEstudante">Inscrever-se agora </Link></p>
+                <p className="criar-conta"> Não tem uma conta? <Link to="/cadastroEstudante"><b>Inscrever-se agora</b></Link></p>
                   
               
                  

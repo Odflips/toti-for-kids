@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import CheckBox from './componentes/CheckBox'
 
 function cardCourse() {
 
@@ -29,6 +30,11 @@ export default function DisplayCourse() {
                 <h3>{item.hours}</h3>
                 <p> {item.activity}</p>
                 <p> {item.price}</p>
+                <CheckBox />
+                
+
+                
+                
                 
             </div>
 

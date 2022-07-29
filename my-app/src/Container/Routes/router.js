@@ -14,6 +14,7 @@ import CadastroEstudante from "../../componentes/cadastroEstudante";
 import DashboardProf from "../../componentes/dashboardProf";
 import CardCourses from "../../componentes/card";
 
+
 const Router = () => {
    return (
       <BrowserRouter>
@@ -26,6 +27,7 @@ const Router = () => {
             <Route exact path="/cadastroEstudante" element={<CadastroEstudante />} />
             <Route exact path="/dashboardProf" element={<DashboardProf />} />
             <Route exact path="/card" element={<CardCourses />} />
+            
 
 
 

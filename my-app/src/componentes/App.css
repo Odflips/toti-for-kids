@@ -343,6 +343,26 @@ h2{
   justify-content: space-around;
   align-items: center;
 }
+
+.checkbox{
+
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  cursor: pointer;
+  
+
+}
+
+.checkbox.checked {
+  background-color: black;
+}
+
+
+
+
+
 @media screen and (max-width: 800px){
 
   .cabeçalho a{
@@ -438,6 +458,21 @@ h2{
     gap: 10px;
     
     
+  }
+
+  .information{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 87px;
+  }
+
+  .container2{
+    width: 350px;
+  }
+
+  .grid{
+    margin-left: 10px;
   }
   
 }
