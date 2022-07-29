@@ -1,11 +1,13 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import ListCourse from './administrador/listCourses';
 import FormCourse from './administrador/formCourse';
-import ListEstudantes from './administrador/listEstudante';
+
+
 
 function Administrador() {
     //Conexion bd courses
     const [detalhes_courses, setCourses] = useState([])
+    const [courseUpdated, setcourseUpdated] = useState(false);
 
     const [course, setCourse] = useState({
         nome: '',
@@ -22,22 +24,9 @@ function Administrador() {
                 .then(res => setCourses(res))
         }
         getCourses()
-    }, []);
+        setcourseUpdated(false)
+    }, [courseUpdated]);
 
-//conexion bd estudiantes
-    const [estudantes, setEstudantes] = useState([])
-
-    
-
-
-    useEffect(() => {
-        const getEstudantes= () => {
-            fetch('http://localhost:3002/api/estudantes')
-                .then(res => res.json())
-                .then(res => setEstudantes(res))
-        }
-        getEstudantes()
-    }, [])
 
     return (
         <Fragment>
@@ -46,7 +35,7 @@ function Administrador() {
                 <div className='row'>
                     <div className='col-7'>
                         <h2 style={{ textAlign: "center" }}>Lista de Cursos</h2>
-                        <ListCourse detalhes_courses={detalhes_courses} />
+                        <ListCourse setCourse={setCourse} course={course} detalhes_courses={detalhes_courses}  setcourseUpdated={setcourseUpdated} />
 
                     </div>
                     <div className='col-5'>
@@ -55,8 +44,7 @@ function Administrador() {
                     </div>
                     <div className='container'>
                         <h2 style={{ textAlign: "center" }}>Lista de Estudiantes Inscriptos</h2>
-                        <ListEstudantes estudantes={estudantes} />
-
+                        
                     </div>
                 </div>
             </div>

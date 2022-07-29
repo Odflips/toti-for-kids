@@ -27,7 +27,7 @@ const FormCourse = ({ course, setCourse }) => {
         }
 
         fetch('http://localhost:3002/api', requestInit)
-            .then(res => res.json())
+            .then(res => res.text())
             .then(res => console.log(res))
 
         //reiniciar el state
@@ -46,7 +46,7 @@ const FormCourse = ({ course, setCourse }) => {
         <form onSubmit={onSubmit}>
             <div className='mb-4'>
                 <label htmlFor='nomeCourse' className='form-label'>Nome do Curso</label>
-                <input value={nome} name='nome' onChange={changeHandler} type='text' id='nomeCourse' className='form-control' />
+                <input value={ nome} name='nome' onChange={changeHandler} type='text' id='nomeCourse' className='form-control' />
             </div>
             <div className='mb-4'>
                 <label htmlFor='duracaoCourse' className='form-label'>Duracao do Curso</label>

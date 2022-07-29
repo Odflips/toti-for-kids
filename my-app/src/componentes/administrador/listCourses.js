@@ -1,6 +1,54 @@
 import React from 'react'
 
-const ListCourses = ({ detalhes_courses }) => {
+const ListCourses = ({ detalhes_courses, setcourseUpdated, course,setCourse}) => {
+
+    const handleDelete = idCourse => {
+
+        const requestInit = {
+            method: 'DELETE',
+        }
+
+        fetch('http://localhost:3002/api/' + idCourse, requestInit)
+            .then(res => res.text())
+            .then(res => console.log(res))
+
+        setcourseUpdated(true)
+    }
+
+    let { nome, duracao, detalhes, price } = course
+    const handleUpdate = idCourse => {
+      
+
+        //validacion de los inputs
+        price = parseInt(price)
+        if (nome === '' || duracao === '' || detalhes === '' || price <= 0) {
+            alert('Toda la informacion es obligatoria')
+            return
+        }
+        const requestInit = {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(course)
+        }
+
+        fetch('http://localhost:3002/api/' + idCourse, requestInit)
+            .then(res => res.text())
+            .then(res => console.log(res))
+        
+        //reiniciar el state
+        setCourse({
+            nome: '',
+            duracao: '',
+            detalhes: '',
+            price: 0
+
+        })
+
+        setcourseUpdated(true)
+    }
+
+    
+
     return (
         <table className='table'>
             <thead>
@@ -9,17 +57,27 @@ const ListCourses = ({ detalhes_courses }) => {
                     <th>Nome do Curso</th>
                     <th>Duracao do Curso</th>
                     <th>Detalhes do Curso </th>
-                    <th>Price</th>
+                    <th>Price R$</th>
                 </tr>
             </thead>
             <tbody>
                 {detalhes_courses.map(course => (
                     <tr key={course.idCourse}>
-                        <th>{course.idCourse}</th>
-                        <th>{course.nome}</th>
-                        <th>{course.duracao}</th>
-                        <th>{course.detalhes}</th>
-                        <th>{course.price}</th>
+                        <td>{course.idCourse}</td>
+                        <td>{course.nome}</td>
+                        <td>{course.duracao}</td>
+                        <td>{course.detalhes}</td>
+                        <td>{course.price}</td>
+                        <td>
+                            <div className='mb-3'>
+                                <button onClick={() => handleDelete(course.idCourse)} className='btn btn-danger'>Delete</button>
+                            </div>
+                        </td>
+                        <td>
+                            <div className='mb-3'>
+                                <button onClick={() => handleUpdate(course.idCourse)} className='btn btn-dark'>Update</button>
+                            </div>
+                        </td>
                     </tr>
                 ))}
             </tbody>
