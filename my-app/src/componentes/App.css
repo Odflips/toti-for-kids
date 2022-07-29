@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mochiy+Pop+One&display=swap');
+
+
+
+
 *{
   padding: 0;
   margin: 0;
@@ -78,8 +84,9 @@ a{
   gap: 25px;
   width: 90%;
   margin-left: 4em;
-  color: rgb(10, 10, 10);
-  font-size: 20px;
+  color: rgb(199, 165, 71);
+  font-size: 17px;
+  font-family: 'Mochiy Pop One', sans-serif;
 
   
 }
@@ -175,7 +182,8 @@ h2{
   gap: 80px;
   justify-content: center;
   background-image:
-    url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg)
+    url(https://www.panambyeducacional.com.br/wp-content/uploads/2020/08/09082020.jpg);
+    font-family: 'Mochiy Pop One', sans-serif;
 
 
 
@@ -359,6 +367,9 @@ h2{
   background-color: black;
 }
 
+.textofinal{
+  font-family: 'Abril Fatface', cursive;
+}
 
 
 

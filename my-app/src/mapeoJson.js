@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from "react"
 import CheckBox from './componentes/CheckBox'
 
-<<<<<<< HEAD
 
 function cardCourse(){
-=======
-function cardCourse() {
->>>>>>> 4adfab6f75e7002ce7730d290a52ddde880bbc5f
 
     const [courses, setCourse] = useState([])
 
@@ -22,7 +18,6 @@ function cardCourse() {
 }
 
 export default function DisplayCourse() {
-<<<<<<< HEAD
     const card = cardCourse()
 
         
@@ -35,10 +30,6 @@ export default function DisplayCourse() {
                     setCourse(datos)
                 })
         }, [])*/
-=======
-
-    const card = cardCourse()
->>>>>>> 4adfab6f75e7002ce7730d290a52ddde880bbc5f
 
     return (
 
