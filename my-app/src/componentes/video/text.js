@@ -19,15 +19,15 @@ const VideoText =()=>{
 
           <p>
           Parece que crianças já nascem sabendo mexer no smartphone. 
-          E, de fato, começam a dominar tais ferramentas mais cedo do que se imagina.
-         Mas, a verdade é que, muitas vezes, usam este conhecimento para comunicação e 
-         diversão. E param por aí. Por que, então, não transformar esta afinidade natural
-          com a tecnologia em profissão? “Engana-se quem pensa que a programação é útil
+          E, de fato, começam a dominar<br/>tais ferramentas mais cedo do que se imagina.
+         Mas, a verdade é que, muitas vezes, usam este <br/> conhecimento para comunicação e 
+         diversão. E param por aí. Por que, então, não transformar<br/> esta afinidade natural
+          com a tecnologia em profissão? “Engana-se quem pensa que a programação<br/> é útil
            somente para quem quer fazer Ciência da Computação ou Engenharia.
-           Hoje, e isso será crescente no decorrer dos anos, todas as profissões 
-           terão seus processos transformados. Advogados, contadores, porteiros,
+           Hoje, e isso será crescente<br/> no decorrer dos anos, todas as profissões 
+           terão seus processos transformados. Advogados, contadores,<br/> porteiros,
             todos terão seus processos transformados diante da 4ª Revolução Industrial, 
-          e dominar conceitos de programação será indispensável”, diz Mohamed Elhabiby.
+          e dominar conceitos<br/> de programação será indispensável”, diz Mohamed Elhabiby.
           </p>
         </div>
 
