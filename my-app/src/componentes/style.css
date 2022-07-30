@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
+
 *{
   padding: 0;
   margin: 0;
@@ -90,6 +92,7 @@ body{
     line-height: 40px;
     width: 30%;
     margin-left: 35%;
+    cursor: pointer;
     
   }
   .input{
@@ -138,7 +141,7 @@ body{
     padding: 20px 40px;
     width: 90%;
     text-align: center;
-    margin-left: 10px;
+    margin-left: 3%;
 
     
   }

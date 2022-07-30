@@ -109,10 +109,10 @@ const LoginEstudante =() =>{
                {errors.senha && <p style={style}>{errors.senha}</p>}
                <br/>
                <button  className="loginBtn">
-                <Link to="/card">Fazer Login </Link> 
+                <Link to="/">Fazer Login </Link> 
                </button>
 
-                <p className="criar-conta"> Não tem uma conta? <Link to="/cadastroEstudante">Inscrever-se agora </Link></p>
+                <p className="criar-conta"> Não tem uma conta? <Link to="/cadastroEstudante"><b>Inscrever-se agora</b></Link></p>
                   
               
                  
