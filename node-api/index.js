@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-
-=======
 const express = require('express')
 const app = express()
 const mysql = require('mysql2')
@@ -33,4 +30,4 @@ app.use('/api', routes)
 app.listen(app.get('port'), () => {
     console.log('server running on port', app.get('port'))
 })
->>>>>>> 0ce413d0061e24884c50eaf9c7bf411943749542
+
