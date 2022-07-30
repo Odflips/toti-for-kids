@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from "sweetalert2";
 
 const FormCourse = ({ course, setCourse }) => {
 
@@ -28,7 +29,17 @@ const FormCourse = ({ course, setCourse }) => {
 
         fetch('http://localhost:3002/api', requestInit)
             .then(res => res.text())
-            .then(res => console.log(res))
+            .then((res) => {
+                     
+                    Swal.fire(
+                      'adicionado!',
+                      'O curso  foi adicionado com sucesso!',
+                      'success'
+                    )
+                    })  
+           
+               
+
 
         //reiniciar el state
         setCourse({

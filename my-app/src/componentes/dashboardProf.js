@@ -16,7 +16,7 @@ const DashboardProf= () => {
                 </div>
                 <div className="BtnProf">
                 <button className="btnProf">Editar</button>
-                <button className="btnProf">Eliminar</button>
+               
                 </div>
 
 
@@ -30,7 +30,7 @@ const DashboardProf= () => {
                 </div>
                 <div className="BtnProf">
                 <button className="btnProf">Editar</button>
-                <button className="btnProf">Eliminar</button>
+                
                 </div>
 
 
@@ -44,7 +44,7 @@ const DashboardProf= () => {
                 </div>
                 <div className="BtnProf">
                 <button className="btnProf">Editar</button>
-                <button className="btnProf">Eliminar</button>
+               
                 </div>
 
 

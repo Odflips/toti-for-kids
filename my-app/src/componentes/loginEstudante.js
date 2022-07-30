@@ -111,6 +111,7 @@ const LoginEstudante =() =>{
                <button  className="loginBtn">
                 <Link to="/">Fazer Login </Link> 
                </button>
+               <p>Esqueceu sua Senha?</p>
 
                 <p className="criar-conta"> Não tem uma conta? <Link to="/cadastroEstudante"><b>Inscrever-se agora</b></Link></p>
                   

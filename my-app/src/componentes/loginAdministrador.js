@@ -1,24 +1,21 @@
-import React from "react"
+import React from "react";
+import { Container,FormControl,FormGroup} from "react-bootstrap"
+import { Link } from "react-router-dom";
 import "./style.css"
-import "./App.css"
-import Footer from "./footer"
-import { Container,FormGroup,FormControl } from "react-bootstrap"
-import { Link } from "react-router-dom"
-import { useForm } from "./hooks/useForm"
-
+import Footer from "./footer.js"
+import { useForm } from "./hooks/useForm";
 
 const initialForm ={
 
   usuario:"",
-  senha:"",
-  curso:""
+  senha:""
   
 }
 
 const validationsForm =(form) =>{
   let errors={}
  
-
+  let regexUserName=/^(w+[/./-]?){1,}[A-Za-zÁáàãÉéêÍíÓóôÜü\s]+$/
   let regexpassword = /^.{1,8}$/
 
 
@@ -33,55 +30,61 @@ if(!form.senha.trim()){
   errors.senha = "A sua senha pode conter somente 8 caracteres"
 
  }
- if(!form.curso.trim()){
-  errors.curso = "O Campo curso é requerido"
-}
  
  return errors
 }
 
 
 
-const LoginProfessor = () =>{
+
+
+
+const LoginAdministrador =() =>{
 
 
   const{form,
     errors,
     handleChange,
     handleBlur,
-    handleLoginProfessor}= useForm(initialForm,validationsForm)
+    handleLoginEstudante}= useForm(initialForm,validationsForm)
 
     let style={
       fontWeight:"bold",
       color:"#dc3545",
     }
 
-   return(
-       <div className="conteiner">
-       
-        <Container  className="bodyLoginP">
-            <div className="loginE2">
-            <div>
+    return (
+        <div className="conteiner">
+           
+           <Container className="bodyLoginE"> 
+         
+        
+            <div className="loginE">
+              <div>
                 <h1 className="titulo">Sign in</h1>
                
                 <p className="subtitulo">Transforme o Mundo</p>
              
               </div>
               
-
            
-           <form onSubmit={ handleLoginProfessor}>
-           <FormGroup className="mb-2 ">
+          
+             
+             
+             <form className="sem-conta" onSubmit={handleLoginEstudante}>
+             
 
+                <FormGroup className="mb-2 ">
                     <FormControl
                       className="input"
                       type="text"
                       name="usuario"
                       placeholder="Usuario"
-                      onBlur={handleBlur}
+                     onBlur={handleBlur}
                      onChange={handleChange}
                      value={form.usuario}
                       required
+               
                     />
 
                 </FormGroup>
@@ -93,47 +96,42 @@ const LoginProfessor = () =>{
                    className="input"
                   type="text"
                   name="senha"
-                 placeholder="Senha"
-                 onBlur={handleBlur}
-                 onChange={handleChange}
-                 value={form.senha}
-                 required
+                  placeholder="Senha"
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={form.senha}
+                   required
+                  
                 />
                
                 
                </FormGroup>
-
                {errors.senha && <p style={style}>{errors.senha}</p>}
                <br/>
-
-               <FormGroup className="mb-2">
-                 <FormControl 
-                   className="input"
-                  type="text"
-                  name="curso"
-                 placeholder="curso"
-                 onBlur={handleBlur}
-                onChange={handleChange}
-                value={form.curso}
-                 required
-                />
-                </FormGroup>
-                {errors.curso && <p style={style}>{errors.curso}</p>}
-
-                <br />
-               <button  className="loginBtn2">
-               <Link to="/dashboardProf">Fazer Login </Link> 
+               <button  className="loginBtn">
+                <Link to="/Administrador">Fazer Login </Link> 
                </button>
                <p>Esqueceu sua Senha?</p>
-           </form>
-           </div>
-         
-        </Container>
+
+                
+              
+                 
+             </form>
+            
+             </div>
+
+            
+             
+           
+            
+      </Container>
+      <Footer />
+            </div>
+    )
+}
+
+        export default LoginAdministrador;
+        
 
         
-        <Footer />
-      
-       </div>
-   )
-}
-export default LoginProfessor;
+   

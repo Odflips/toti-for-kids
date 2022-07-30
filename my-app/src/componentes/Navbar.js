@@ -15,7 +15,7 @@ const NavBar =() => {
 
         <div className="login">
           <div className="Item-menu">
-            <Link className="menu" to="/administrador" >Administrador</Link>
+            <Link className="menu" to="/loginAdministrador" >Administrador</Link>
           </div>
          <div className="Item-menu">
            <Link className="menu" to="/estudante" >Estudante</Link>

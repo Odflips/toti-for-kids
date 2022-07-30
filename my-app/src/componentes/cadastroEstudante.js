@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, FormGroup, FormControl } from "react-bootstrap";
 import Footer from "./footer";
 import { useForm } from "./hooks/useForm";
@@ -6,13 +6,14 @@ import { useNavigate} from "react-router-dom";
 import Swal from "sweetalert2"
 import "./style.css"
 
-const initialForm ={
-  nome:"",
-  usuario:"",
-  email:"",
-  senha:"",
-  resenha:"",
+const initialForm = {
+  nome:'',
+  usuario:'',
+  email:'',
+  senha:'',
+  resenha:'',
 }
+
 
 
 const validationsForm =(form) =>{
@@ -75,18 +76,20 @@ const CadastroEstudante = () => {
   return (
     <div className="conteiner">
 
-      <Container className="bodyLoginE2 ">
+      <Container  className="bodyLoginE2">
 
 
 
         <div className="loginE3">
-          <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
             <div className="completarformulario">
+           
               <h3>Complete o Formulário e junte-se a nós</h3>
+             
               <p style={{ fontSize: 12, marginTop: 0 }}>vagas limitadas!</p>
             </div>
 
-
+           
             <FormGroup className="mb-2 ">
               <label className="label">Nome</label>
               <FormControl
@@ -181,11 +184,12 @@ const CadastroEstudante = () => {
 
             {errors.resenha && <p style={style}>{errors.resenha}</p>}
             <br />
+
             <button className="loginCadastro">
               Cadastrarse
             </button>
 
-            <div id="message"></div>
+            <div id="message"> </div>
 
             <div className="texto-fundo">
 
@@ -197,17 +201,21 @@ const CadastroEstudante = () => {
  
         {loading && Swal.showLoading()}
         {response &&  Swal.fire(
-                    'Editado!',
-                    `O registro ${response.form.nome} foi editado com sucesso!`,
+                    'Adicionado!',
+                    'O registro  foi adicionado con sucesso !',
                     'success'
                   )
                   && navigate('/estudante')}
+        
         </div>
-
-
-      </Container>
+        
+         
+         </Container>
+      
+      
       <Footer />
-    </div>
+   
+   </div>
   )
 }
 export default CadastroEstudante;

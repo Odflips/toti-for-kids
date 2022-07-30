@@ -13,7 +13,7 @@ export const useForm =(initialForm,validateForm)=>{
     const[response,setResponse]= useState(null)
     
 
-    const URLCADASTRO="http://localhost:3002/cadastroEstudante"
+    const URLCADASTRO="http://localhost:3002/api/estudante"
     const URLoginE="http://localhost:3002/loginEstudante"
     const URLoginP= `http://localhost:3002/loginProfessors/${id}`
 
@@ -29,15 +29,23 @@ export const useForm =(initialForm,validateForm)=>{
         setErrors(validateForm(form))
     } 
     
-    const handleSubmit = async (e) =>{
+    const handleSubmit =  (e) =>{
         e.preventDefault()
         setErrors(validateForm(form))
 
         if(Object.keys(errors).length === 0){
             alert("Enviando Formulario")
             setLoading(true)
-            await axios.post(URLCADASTRO)
-            .then((response) => {
+            const requestInit = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form)
+            }
+    
+            fetch('http://localhost:3002/api/estudantes' , requestInit)
+                .then(res => res.text())
+                .then((res) => {
+                         
                 setLoading(false)
               setResponse(true)
               

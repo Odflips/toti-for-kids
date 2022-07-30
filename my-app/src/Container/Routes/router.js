@@ -13,7 +13,8 @@ import LoginEstudante from "../../componentes/loginEstudante";
 import CadastroEstudante from "../../componentes/cadastroEstudante";
 import DashboardProf from "../../componentes/dashboardProf";
 import Administrador from "../../componentes/administrador";
-
+import CadastroEstudantes from "../../componentes/cadastroEstudantes";
+import LoginAdministrador from "../../componentes/loginAdministrador";
 
 const Router = () => {
    return (
@@ -27,7 +28,8 @@ const Router = () => {
             <Route exact path="/cadastroEstudante" element={<CadastroEstudante />} />
             <Route exact path="/dashboardProf" element={<DashboardProf />} />
             <Route exact path="/administrador" element={<Administrador />} />
-
+            <Route exact path="/loginAdministrador" element={<LoginAdministrador />} />
+            
 
            
             
