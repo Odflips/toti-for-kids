@@ -7,7 +7,7 @@ import Cursos from '../assets/img/Cursos3.gif';
 
 
 
-const CardAdmin=() => {
+const Card=() => {
     return(
         <div>
           <div className="Card-conteiner">
@@ -45,4 +45,4 @@ const CardAdmin=() => {
     )
 }
 
-export default CardAdmin;
+export default Card;

@@ -386,8 +386,8 @@ h2{
 
 .textofinal{
   font-size: 15px;
-  text-shadow: 0px 0px 15px rgba(0,0,0,1);
-  color: #ffffff;
+  
+  color: rgb(96, 1, 173);
   font-family: 'Mochiy Pop One', sans-serif;
 }
 
@@ -456,6 +456,10 @@ h2{
     font-size: 15px;
   }
 
+  .login{
+    display: none;
+  }
+
   .sectionprincipal{
     margin-left: 10px;
     
@@ -473,16 +477,17 @@ h2{
   }
 
   .robotPrincipal{
-    height: 200px;
-    margin-left: 30px;
+    height: 150px;
+    margin-left: 50px;
   }
 
   .robot{
+    height: 150px;
     margin-left: 30px;
   }
 
   .cursoimg{
-    height: 200px;
+    height: 130px;
     border-radius: 10px;
   }
 
@@ -496,7 +501,8 @@ h2{
   }
 
   .textofinal{
-    font-size: 15px;
+    font-size: 13px;
+    margin-left: -22px;
   }
 
   .footer{
@@ -505,6 +511,10 @@ h2{
   
   .social{
     width: 200px;
+  }
+
+  .text-foot{
+    font-size: 15px;
   }
 
   .soc-img{
