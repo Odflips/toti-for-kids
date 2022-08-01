@@ -14,7 +14,7 @@ export const useForm =(initialForm,validateForm)=>{
     
 
     const URLCADASTRO="http://localhost:3002/api/estudante"
-    const URLoginE="http://localhost:3002/loginEstudante"
+    const URLoginE="http://localhost:3002/loginEstudantes"
     const URLoginP= `http://localhost:3002/loginProfessors/${id}`
 
     const handleChange =(e)=>{
@@ -48,7 +48,7 @@ export const useForm =(initialForm,validateForm)=>{
                          
                 setLoading(false)
               setResponse(true)
-              
+              console.log("deu certo")
 
             })
             
@@ -70,12 +70,25 @@ export const useForm =(initialForm,validateForm)=>{
 
         if(Object.keys(errors).length === 0){
             
+            
             setLoading(true)
-            await axios.get(URLoginE)
-            .then((res)=>{
-              setLoading(false)
+            const requestInit = {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(form)
+            }
+    
+            fetch(URLoginE, requestInit)
+                .then(res => res.text())
+                .then((res) => {
+                         
+                setLoading(false)
               setResponse(true)
+              
+
             })
+            
+                
 
         }else{
             Swal.fire(

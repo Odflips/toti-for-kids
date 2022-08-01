@@ -111,7 +111,7 @@ const LoginAdministrador =() =>{
                {errors.senha && <p style={style}>{errors.senha}</p>}
                <br/>
                <button  className="loginBtn">
-                <Link to="/Administrador">Fazer Login </Link> 
+                <Link to="/card">Fazer Login </Link> 
                </button>
                <p>Esqueceu sua Senha?</p>
 

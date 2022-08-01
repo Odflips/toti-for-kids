@@ -5,6 +5,7 @@ import "./style.css"
 import Footer from "./footer.js"
 import { useForm } from "./hooks/useForm";
 import mascota from "../assets/img/mascota.png"
+import Swal from "sweetalert2";
 
 const initialForm ={
 
@@ -45,6 +46,8 @@ const LoginEstudante =() =>{
 
   const{form,
     errors,
+    loading,
+    response,
     handleChange,
     handleBlur,
     handleLoginEstudante}= useForm(initialForm,validationsForm)
@@ -113,6 +116,13 @@ const LoginEstudante =() =>{
                <button  className="loginBtn">
                 <Link to="/">Fazer Login </Link> 
                </button>
+               {loading && Swal.showLoading()}
+               {response &&  Swal.fire(
+                    'Seja Bem vindo!',
+                    ' Aprenda com nós!',
+                    'success'
+                  )
+                  }
                <p>Esqueceu sua Senha?</p>
 
                 <p className="criar-conta"> Não tem uma conta? <Link to="/cadastroEstudante"><b>Inscrever-se agora</b></Link></p>
@@ -120,6 +130,8 @@ const LoginEstudante =() =>{
               
                  
              </form>
+       
+        
             
              </div>
 

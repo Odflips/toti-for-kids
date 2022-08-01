@@ -12,10 +12,12 @@ import NavBar from "../../componentes/Navbar";
 import LoginEstudante from "../../componentes/loginEstudante";
 import CadastroEstudante from "../../componentes/cadastroEstudante";
 import DashboardProf from "../../componentes/dashboardProf";
-import Administrador from "../../componentes/administrador";
+import Administrador from "../../componentes/administradorCursos";
 import CadastroEstudantes from "../../componentes/cadastroEstudantes";
 import LoginAdministrador from "../../componentes/loginAdministrador";
 import Card from "../../componentes/card";
+import AdministradorCursos from "../../componentes/administradorCursos";
+import AdministradorEstudantes from "../../componentes/administradorEstudantes";
 
 
 const Router = () => {
@@ -32,6 +34,10 @@ const Router = () => {
             <Route exact path="/administrador" element={<Administrador />} />
             <Route exact path="/loginAdministrador" element={<LoginAdministrador />} />
             <Route exact path="/card" element={<Card/>} />
+            <Route exact path="/administradorCursos" element={<AdministradorCursos />} />
+            <Route exact path="/administradorEstudantes" element={<AdministradorEstudantes/>} />
+
+
             
 
            
