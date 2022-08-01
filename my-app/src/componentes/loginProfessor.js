@@ -126,7 +126,7 @@ const LoginProfessor = () =>{
                <button  className="loginBtn2">
                <Link to="/dashboardProf">Fazer Login </Link> 
                </button>
-               <p>Esqueceu sua Senha?</p>
+               <p className="esq">Esqueceu sua Senha?</p>
            </form>
            </div>
          
