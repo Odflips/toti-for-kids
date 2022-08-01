@@ -27,7 +27,7 @@ const FormCourse = ({ course, setCourse }) => {
             body: JSON.stringify(course)
         }
 
-        fetch('http://localhost:3002/api', requestInit)
+        fetch('http://localhost:3002/api/detalhes_course', requestInit)
             .then(res => res.text())
             .then((res) => {
                      

@@ -25,7 +25,7 @@ function AdministradorCursos() {
 
     useEffect(() => {
         const getCourses = () => {
-            fetch('http://localhost:3002/api')
+            fetch('http://localhost:3002/api/detalhes_course')
                 .then(res => res.json())
                 .then(res => setCourses(res))
         }

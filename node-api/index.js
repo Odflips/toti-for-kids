@@ -5,6 +5,9 @@ const mysql = require('mysql2')
 const myconn = require('express-myconnection')
 const routes = require('./routes')
 const cors = require('cors')
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
+
 
 app.set('port', process.env.PORT || 3002)
 

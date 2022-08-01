@@ -13,7 +13,7 @@ export const useForm =(initialForm,validateForm)=>{
     const[response,setResponse]= useState(null)
     
 
-    const URLCADASTRO="http://localhost:3002/api/estudante"
+    const URLCADASTRO="http://localhost:3002/api/estudantes"
     const URLoginE="http://localhost:3002/loginEstudantes"
     const URLoginP= `http://localhost:3002/loginProfessors/${id}`
 
@@ -42,7 +42,7 @@ export const useForm =(initialForm,validateForm)=>{
                 body: JSON.stringify(form)
             }
     
-            fetch('http://localhost:3002/api/estudantes' , requestInit)
+            fetch(URLCADASTRO, requestInit)
                 .then(res => res.text())
                 .then((res) => {
                          

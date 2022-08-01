@@ -8,7 +8,7 @@ const ListCourses = ({ detalhes_courses, setcourseUpdated, course,setCourse}) =>
             method: 'DELETE',
         }
 
-        fetch('http://localhost:3002/api/' + idCourse, requestInit)
+        fetch('http://localhost:3002/api/detalhes_course/' + idCourse, requestInit)
             .then(res => res.text())
             .then(res => console.log(res))
 
@@ -31,7 +31,7 @@ const ListCourses = ({ detalhes_courses, setcourseUpdated, course,setCourse}) =>
             body: JSON.stringify(course)
         }
 
-        fetch('http://localhost:3002/api/' + idCourse, requestInit)
+        fetch('http://localhost:3002/api/detalhes_course/' + idCourse, requestInit)
             .then(res => res.text())
             .then(res => console.log(res))
         
