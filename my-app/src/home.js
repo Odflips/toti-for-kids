@@ -1,7 +1,6 @@
 import React from "react";
 import '../src/componentes/App.css';
 import mascota from './assets/img/mascota.png';
-import BannerHome from "./componentes/BannerHome";
 import Footer from './componentes/footer';
 import Cursos from "./componentes/cursos";
 import VideoText from "./componentes/video/text";

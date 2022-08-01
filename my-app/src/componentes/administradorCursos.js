@@ -1,12 +1,14 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import ListCourse from './administrador/listCourses';
-import FormCourse from './administrador/formCourse';
-import ListEstudantes from './administrador/listEstudantes';
+import ListCourse from './administrador-cursos/listCourses';
+import FormCourse from './administrador-cursos/formCourse';
+import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import Footer from './footer';
 
 
 
 
-function Administrador() {
+function AdministradorCursos() {
     //Conexion bd courses
     //---GET CURSOS
     const [detalhes_courses, setCourses] = useState([])
@@ -31,28 +33,6 @@ function Administrador() {
         setcourseUpdated(false)
     }, [courseUpdated]);
 
-//----GET ESTUDANTES---
-
-const [estudantes, setEstudantes] = useState([])
-const [estudanteUpdated, setEstudanteUpdated] = useState(false);
-
-
-const [estudante, setEstudante] = useState({
-    nome: '',
-   email: '',
-   usuario: '',
-    senha:'',
-    resenha:''
-
-});useEffect(() => {
-    const getEstudantes = () => {
-        fetch('http://localhost:3002/api/estudantes')
-            .then(res => res.json())
-            .then(res => setEstudantes(res))
-    }
-    getEstudantes()
-    setEstudanteUpdated(false)
-}, [estudanteUpdated]);
 
 
     
@@ -70,16 +50,14 @@ const [estudante, setEstudante] = useState({
                         <h2 style={{ textAlign: "center" }}>Adicionar Cursos</h2>
                         <FormCourse course={course} setCourse={setCourse} />
                     </div>
-                    <div className='container'>
-                        <h2 style={{ textAlign: "center" }}>Estudantes cadastrados</h2>
-                        <ListEstudantes setEstudante={setEstudante} estudante={estudante} estudantes={estudantes}  setEstudanteUpdated={setEstudanteUpdated} />
-                    </div>
+                    
                 </div>
             </div>
-
+        <Button className='btn btn-secodary'><Link to='/card'> Voltar</Link></Button>
+        <Footer />
         </Fragment>
 
     );
 }
 
-export default Administrador;
+export default AdministradorCursos;
