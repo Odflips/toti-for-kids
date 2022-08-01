@@ -2,13 +2,13 @@ import React from 'react'
 
 const ListEstudantes = ({ estudantes,setEstudanteUpdated,estudante,setEstudante}) => {
 
-    const handleDelete = idEstudantes => {
+    const handleDelete = idEstudante => {
 
         const requestInit = {
             method: 'DELETE',
         }
 
-        fetch('http://localhost:3002/api/' + idEstudantes, requestInit)
+        fetch('http://localhost:3002/api/estudantes/' + idEstudante, requestInit)
             .then(res => res.text())
             .then(res => console.log(res))
 
@@ -31,7 +31,7 @@ const ListEstudantes = ({ estudantes,setEstudanteUpdated,estudante,setEstudante}
             body: JSON.stringify(estudante)
         }
 
-        fetch('http://localhost:3002/api/' + idEstudantes, requestInit)
+        fetch('http://localhost:3002/api/estudantes/' + idEstudantes, requestInit)
             .then(res => res.text())
             .then(res => console.log(res))
         
