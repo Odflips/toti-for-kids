@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./style.css"
 import Footer from "./footer.js"
 import { useForm } from "./hooks/useForm";
+import mascota from "../assets/img/mascota.png"
 
 const initialForm ={
 
@@ -64,6 +65,7 @@ const LoginEstudante =() =>{
                 <h1 className="titulo">Sign in</h1>
                
                 <p className="subtitulo">Transforme o Mundo</p>
+                <img className="robotPrincipal"src={mascota}/>
              
               </div>
               
