@@ -20,7 +20,7 @@ const Footer = () =>{
               
               <br />
              
-             <span href="https://goo.gl/maps/HrvM1XKv3GDwEMRz7">Endereço: Av. dos Bancários, 90 - Ponta da Praia.Santos,SP</span>
+             <span>Endereço: Av. dos Bancários, 90 - Ponta da Praia.Santos,SP</span>
 
              </div>
              

@@ -15,6 +15,8 @@ import DashboardProf from "../../componentes/dashboardProf";
 import Administrador from "../../componentes/administrador";
 import CadastroEstudantes from "../../componentes/cadastroEstudantes";
 import LoginAdministrador from "../../componentes/loginAdministrador";
+import Card from "../../componentes/card";
+
 
 const Router = () => {
    return (
@@ -29,6 +31,7 @@ const Router = () => {
             <Route exact path="/dashboardProf" element={<DashboardProf />} />
             <Route exact path="/administrador" element={<Administrador />} />
             <Route exact path="/loginAdministrador" element={<LoginAdministrador />} />
+            <Route exact path="/card" element={<Card/>} />
             
 
            
