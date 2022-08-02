@@ -3,56 +3,37 @@ import { Container,FormControl,FormGroup} from "react-bootstrap"
 import { Link } from "react-router-dom";
 import "./style.css"
 import Footer from "./footer.js"
-import { useForm } from "./hooks/useForm";
 import mascota from "../assets/img/mascota.png"
-
-const initialForm ={
-
-  usuario:"",
-  senha:""
-  
-}
-
-const validationsForm =(form) =>{
-  let errors={}
- 
-  let regexUserName=/^(w+[/./-]?){1,}[A-Za-zÁáàãÉéêÍíÓóôÜü\s]+$/
-  let regexpassword = /^.{1,8}$/
-
-
-
-
-if(!form.usuario.trim()){
-  errors.usuario = "O Campo usuario é requerido"
-}
-if(!form.senha.trim()){
-  errors.senha = "O Campo  senha  é requerido"
-}else if(!regexpassword.test(form.senha.trim())){
-  errors.senha = "A sua senha pode conter somente 8 caracteres"
-
- }
- 
- return errors
-}
-
-
-
+import { useState } from "react";
+import axios from 'axios';
 
 
 
 const LoginAdministrador =() =>{
 
+  const [login, setLogin] = useState({usuario:'', senha:''});
 
-  const{form,
-    errors,
-    handleChange,
-    handleBlur,
-    handleLoginEstudante}= useForm(initialForm,validationsForm)
+  const inputLogin = ({ target }) => {
+    const { name, value } = target
+    setLogin({
+      ...login,
+      [name]:value
+    })
+  }
+  
 
-    let style={
-      fontWeight:"bold",
-      color:"#dc3545",
-    }
+  const onSubmit = () => {
+
+    axios.post('http://localhost:3002/api/validacion', login)
+      .then(({ data }) => {
+      console.log(data)
+      })
+      .catch(({ response }) => {
+      console.log(response)
+    })
+    
+  }
+      
 
     return (
         <div className="conteiner">
@@ -73,7 +54,7 @@ const LoginAdministrador =() =>{
           
              
              
-             <form className="sem-conta" onSubmit={handleLoginEstudante}>
+             <form className="sem-conta" >
              
 
                 <FormGroup className="mb-2 ">
@@ -82,15 +63,14 @@ const LoginAdministrador =() =>{
                       type="text"
                       name="usuario"
                       placeholder="Usuario"
-                     onBlur={handleBlur}
-                     onChange={handleChange}
-                     value={form.usuario}
+                     onChange={inputLogin}                    
+                     value={login.usuario}
                       required
                
                     />
 
                 </FormGroup>
-                {errors.usuario && <p style={style}>{errors.usuario}</p>}
+                
                 
                <br />
                <FormGroup className="mb-2">
@@ -99,18 +79,17 @@ const LoginAdministrador =() =>{
                   type="text"
                   name="senha"
                   placeholder="Senha"
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  value={form.senha}
+                  onChange={inputLogin}    
+                  value={login.senha}
                    required
                   
                 />
                
                 
                </FormGroup>
-               {errors.senha && <p style={style}>{errors.senha}</p>}
+               
                <br/>
-               <button  className="loginBtn">
+               <button onClick={onSubmit} className="loginBtn">
                 <Link to="/card">Fazer Login </Link> 
                </button>
                <p>Esqueceu sua Senha?</p>
