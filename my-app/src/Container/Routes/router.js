@@ -13,12 +13,11 @@ import LoginEstudante from "../../componentes/loginEstudante";
 import CadastroEstudante from "../../componentes/cadastroEstudante";
 import DashboardProf from "../../componentes/dashboardProf";
 import Administrador from "../../componentes/administradorCursos";
-import CadastroEstudantes from "../../componentes/cadastroEstudantes";
 import LoginAdministrador from "../../componentes/loginAdministrador";
 import Card from "../../componentes/card";
 import AdministradorCursos from "../../componentes/administradorCursos";
 import AdministradorEstudantes from "../../componentes/administradorEstudantes";
-
+import AdministradorProfessor from "../../componentes/administradorProfessor";
 
 const Router = () => {
    return (
@@ -36,7 +35,8 @@ const Router = () => {
             <Route exact path="/card" element={<Card/>} />
             <Route exact path="/administradorCursos" element={<AdministradorCursos />} />
             <Route exact path="/administradorEstudantes" element={<AdministradorEstudantes/>} />
-
+            <Route exact path="/administradorProfessores" element={<AdministradorProfessor />} />
+             
 
             
 
