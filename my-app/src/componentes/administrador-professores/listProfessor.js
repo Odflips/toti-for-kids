@@ -20,8 +20,8 @@ const ListProfessor = ({ professores, setprofessorUpdated, professor,setProfesso
       
 
         //validacion de los inputs
-        id_course = parseInt(id_course)
-        if (nome === '' || usuario === '' || senha === '' || id_course <= 0) {
+        id_courses = parseInt(id_courses)
+        if (nome === '' || usuario === '' || senha === '' || id_courses <= 0) {
             alert('Toda la informacion es obligatoria')
             return
         }
