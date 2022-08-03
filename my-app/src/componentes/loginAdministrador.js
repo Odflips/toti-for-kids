@@ -1,6 +1,5 @@
 import React from "react";
 import { Container,FormControl,FormGroup} from "react-bootstrap"
-import { Link } from "react-router-dom";
 import "./style.css"
 import Footer from "./footer.js"
 import { useForm } from "./hooks/useForm";
@@ -16,7 +15,7 @@ const initialForm ={
 const validationsForm =(form) =>{
   let errors={}
  
-  let regexUserName=/^(w+[/./-]?){1,}[A-Za-zÁáàãÉéêÍíÓóôÜü\s]+$/
+ 
   let regexpassword = /^.{1,8}$/
 
 

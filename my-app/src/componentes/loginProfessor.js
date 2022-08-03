@@ -72,7 +72,7 @@ const LoginProfessor = () =>{
               
 
            
-           <form onSubmit={ handleLoginProfessor}>
+           <form onSubmit= {handleLoginProfessor}>
            <FormGroup className="mb-2 ">
 
                     <FormControl
