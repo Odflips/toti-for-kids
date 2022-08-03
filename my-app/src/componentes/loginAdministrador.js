@@ -1,135 +1,135 @@
 import React from "react";
-import { Container,FormControl,FormGroup} from "react-bootstrap"
+import { Container, FormControl, FormGroup } from "react-bootstrap"
 import "./style.css"
 import Footer from "./footer.js"
 import { useForm } from "./hooks/useForm";
 import mascota from "../assets/img/mascota.png"
 
-const initialForm ={
+const initialForm = {
 
-  usuario:"",
-  senha:""
-  
+  usuario: "",
+  senha: ""
+
 }
 
-const validationsForm =(form) =>{
-  let errors={}
- 
- 
+const validationsForm = (form) => {
+  let errors = {}
+
+
   let regexpassword = /^.{1,8}$/
 
 
 
 
-if(!form.usuario.trim()){
-  errors.usuario = "O Campo usuario é requerido"
+  if (!form.usuario.trim()) {
+    errors.usuario = "O Campo usuario é requerido"
+  }
+  if (!form.senha.trim()) {
+    errors.senha = "O Campo  senha  é requerido"
+  } else if (!regexpassword.test(form.senha.trim())) {
+    errors.senha = "A sua senha pode conter somente 8 caracteres"
+
+  }
+
+  return errors
 }
-if(!form.senha.trim()){
-  errors.senha = "O Campo  senha  é requerido"
-}else if(!regexpassword.test(form.senha.trim())){
-  errors.senha = "A sua senha pode conter somente 8 caracteres"
-
- }
- 
- return errors
-}
 
 
 
 
 
 
-const LoginAdministrador =() =>{
+const LoginAdministrador = () => {
 
 
-  const{form,
+  const { form,
     errors,
     handleChange,
     handleBlur,
-    handleLoginAdministrador}= useForm(initialForm,validationsForm)
+    handleLoginAdministrador } = useForm(initialForm, validationsForm)
 
-    let style={
-      fontWeight:"bold",
-      color:"#dc3545",
-    }
+  let style = {
+    fontWeight: "bold",
+    color: "#dc3545",
+  }
 
-    return (
-        <div className="conteiner">
-           
-           <Container className="bodyLoginE"> 
-         
-        
-            <div className="loginE">
-              <div>
-                <h1 className="titulo">Sign in</h1>
-               
-                <p className="subtitulo">Transforme o Mundo</p>
-                <img className="robotForm"src={mascota} alt="cursoimg" />
-             
-              </div>
-              
-           
-          
-             
-             
-             <form className="sem-conta" onSubmit={handleLoginAdministrador}>
-             
+  return (
+    <div className="conteiner">
 
-                <FormGroup className="mb-2 ">
-                    <FormControl
-                      className="input"
-                      type="text"
-                      name="usuario"
-                      placeholder="Usuario"
-                     onBlur={handleBlur}
-                     onChange={handleChange}
-                     value={form.usuario}
-                      required
-               
-                    />
-
-                </FormGroup>
-                {errors.usuario && <p style={style}>{errors.usuario}</p>}
-                
-               <br />
-               <FormGroup className="mb-2">
-                 <FormControl 
-                   className="input"
-                  type="text"
-                  name="senha"
-                  placeholder="Senha"
-                  onBlur={handleBlur}
-                  onChange={handleChange}
-                  value={form.senha}
-                   required
-                  
-                />
-               
-                
-               </FormGroup>
-               {errors.senha && <p style={style}>{errors.senha}</p>}
-               <br/>
-               <button  className="loginBtn">
-              Fazer Login 
-               </button>
-               <p>Esqueceu sua Senha?</p>
+      <Container className="bodyLoginE">
 
 
-                
-              
-                 
-             </form>
-            
-             </div>
+        <div className="loginE">
+          <div>
+            <h1 className="titulo">Sign in</h1>
 
-            
-             
-           
-            
+            <p className="subtitulo">Transforme o Mundo</p>
+            <img className="robotForm" src={mascota} alt="cursoimg" />
+
+          </div>
+
+
+
+
+
+          <form className="sem-conta" onSubmit={handleLoginAdministrador}>
+
+
+            <FormGroup className="mb-2 ">
+              <FormControl
+                className="input"
+                type="text"
+                name="usuario"
+                placeholder="Usuario"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={form.usuario}
+                required
+
+              />
+
+            </FormGroup>
+            {errors.usuario && <p style={style}>{errors.usuario}</p>}
+
+            <br />
+            <FormGroup className="mb-2">
+              <FormControl
+                className="input"
+                type="text"
+                name="senha"
+                placeholder="Senha"
+                onBlur={handleBlur}
+                onChange={handleChange}
+                value={form.senha}
+                required
+
+              />
+
+
+            </FormGroup>
+            {errors.senha && <p style={style}>{errors.senha}</p>}
+            <br />
+            <button className="loginBtn">
+              Fazer Login
+            </button>
+            <p>Esqueceu sua Senha?</p>
+
+
+
+
+
+          </form>
+
+        </div>
+
+
+
+
+
       </Container>
       <Footer />
-            </div>
-    )
+    </div>
+  )
 }
 
-        export default LoginAdministrador;
+export default LoginAdministrador;

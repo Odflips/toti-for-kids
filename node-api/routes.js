@@ -195,7 +195,6 @@ routes.post('/loginEstudantes',(req,res)=>{
     })
 })
 
-
 //--Validacao PROFESSORES
 routes.post('/loginProfessor',(req,res)=>{
     const {usuario,senha} = req.body

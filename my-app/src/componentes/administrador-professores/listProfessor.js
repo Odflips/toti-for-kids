@@ -53,7 +53,6 @@ const ListProfessor = ({ professores, setprofessorUpdated, professor,setProfesso
         <table className='table'>
             <thead>
                 <tr>
-                    <th>ID Professor</th>
                     <th>Nome do Professor</th>
                     <th>Usuario do Professor</th>
                     <th>Senha do Professor </th>
@@ -63,7 +62,6 @@ const ListProfessor = ({ professores, setprofessorUpdated, professor,setProfesso
             <tbody>
                 {professores.map(professor => (
                     <tr key={professor.idProfessor}>
-                        <td>{professor.idProfessor}</td>
                         <td>{professor.nome}</td>
                         <td>{professor.usuario}</td>
                         <td>{professor.senha}</td>
