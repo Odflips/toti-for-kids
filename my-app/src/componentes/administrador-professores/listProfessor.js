@@ -13,6 +13,7 @@ const ListProfessor = ({ professores, setprofessorUpdated, professor,setProfesso
             .then(res => console.log(res))
 
         setprofessorUpdated(true)
+        
     }
 
     let { nome, usuario, senha, id_courses } = professor

@@ -61,7 +61,7 @@ const FormEstudantes = ({ estudante, setEstudante }) => {
                 className='form-control' />
             </div>
             
-            <div className='mb-4'>
+            <div className='mb-4 '>
                 <label htmlFor='resenhaEstu' className='form-label'>Confirmação da senha</label>
                 <input 
                 value={resenha} 
