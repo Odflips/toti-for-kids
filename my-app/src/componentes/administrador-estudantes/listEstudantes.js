@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ListEstudantes = ({ estudantes,setEstudanteUpdated,estudante,setEstudante}) => {
+const ListEstudantes = ({ estudantes, setEstudanteUpdated, estudante, setEstudante }) => {
 
     const handleDelete = idEstudante => {
 
@@ -15,12 +15,12 @@ const ListEstudantes = ({ estudantes,setEstudanteUpdated,estudante,setEstudante}
         setEstudanteUpdated(true)
     }
 
-    let { nome, usuario, email, senha,resenha } = estudante
+    let { nome, usuario, email, senha, resenha } = estudante
     const handleUpdate = idEstudantes => {
-      
+
 
         //validacion de los inputs
-      
+
         if (nome === '' || usuario === '' || email === '' || senha === '' || resenha === '') {
             alert('Toda la informacion es obligatoria')
             return
@@ -34,39 +34,47 @@ const ListEstudantes = ({ estudantes,setEstudanteUpdated,estudante,setEstudante}
         fetch('http://localhost:3002/api/estudantes/' + idEstudantes, requestInit)
             .then(res => res.text())
             .then(res => console.log(res))
-        
+
         //reiniciar el state
         setEstudante({
             nome: '',
             usuario: '',
-             email: '',
+            email: '',
             senha: '',
-            resenha:''
+            resenha: ''
+
 
         })
 
         setEstudanteUpdated(true)
     }
 
-    
+
 
     return (
         <table className='table'>
             <thead>
                 <tr>
-                    <th>ID do aluno</th>
-                    <th>Nome do aluno</th>
-                    <th>Email do aluno</th>
-                    
+
+                    <th>Nome </th>
+                    <th>Email </th>
+                    <th>Senha </th>
+                    <th>Resenha</th>
+
+
+
                 </tr>
             </thead>
             <tbody>
                 {estudantes.map(estudantes => (
                     <tr key={estudantes.idEstudantes}>
-                        <td>{estudantes.idEstudantes}</td>
                         <td>{estudantes.nome}</td>
                         <td>{estudantes.email}</td>
-                       
+                        <td>{estudantes.senha}</td>
+                        <td>{estudantes.resenha}</td>
+
+
+
 
                         <td>
                             <div className='mb-3'>

@@ -21,7 +21,7 @@ export const useForm =(initialForm,validateForm)=>{
 
     const URLCADASTRO="http://localhost:3002/api/estudantes"
     const URLoginE="http://localhost:3002/api/loginEstudantes"
-    const URLoginP= "http://localhost:3002/loginProfessor"
+    const URLoginP= "http://localhost:3002/api/loginProfessor"
     const URLoginA="http://localhost:3002/api/loginAdministrador"
 
     const handleChange =(e)=>{
@@ -137,14 +137,14 @@ const handleLoginAdministrador = (e) =>{
         }*/
    
         
-    const handleLoginProfessor = async (e) =>{
+    const handleLoginProfessor =  (e) =>{
         e.preventDefault()
         setErrors(validateForm(form))
 
         if(Object.keys(errors).length === 0){
             
             setLoading(true)
-            await axios.get(URLoginP,form)
+            axios.post(URLoginP,form)
             .then(({data})=>{
                 localStorage.setItem("auth","yes") 
                           console.log(data)
