@@ -6,11 +6,14 @@ const MeusCursos =()=>{
     const navigate = useNavigate()
    return(
     <div>
+    <div>
         <h1>Seja Bem Vindo!</h1>
-      <Button onClick={()=>{
+      
+    </div>
+    <Button onClick={()=>{
          localStorage.clear()
-        navigate('/estudante')
-      }}>Log out</Button>
+        navigate('/cardEstudante')
+      }}>Voltar</Button>
     </div>
    )
 }

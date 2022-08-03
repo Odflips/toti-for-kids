@@ -16,7 +16,7 @@ import VideoText from "./componentes/video/text";
         
 
         <div className="sectionprincipal">
-        <h1 style={{textAlign:"center", color:"indigo"}}>Olá!</h1>
+        <h1 style={{textAlign:"center", color:"indigo",fontWeight:"bold"}}>Olá!</h1>
         
         <img className="robotPrincipal"src={mascota} alt="cursoimg" />
         

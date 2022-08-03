@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from "react";
 import ListCourses from "../administrador-cursos/listCourses";
+import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 
 
@@ -66,6 +68,8 @@ const TodosOsCursos = () => {
           ))}
         </tbody>
       </table>
+      <Button className='btn btn-secodary'><Link to='/cardEstudante'> Voltar</Link></Button>
+     
     </div>
   )
 }
