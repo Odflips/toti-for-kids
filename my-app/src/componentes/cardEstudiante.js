@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./footer";
 import "./App.css"
-import MisCursos from '../assets/img/Cursos4.gif';
+import MisCursos from '../assets/img/cursos4.gif';
 import Cursos from '../assets/img/Cursos3.gif';
 import { Link } from "react-router-dom";
 
@@ -14,7 +14,7 @@ const Card=() => {
               
 
               <div className="img-container">
-                 <img className="img-card" src={MisCursos} alt='Professor'/>
+                 <img className="img-card" src={MisCursos} alt='MisCursos'/>
                  <h3>Meus Cursos</h3>
                  <div className="btn-card">
                  <button><Link to='/administradorProfessores'> Ver Mais</Link></button>

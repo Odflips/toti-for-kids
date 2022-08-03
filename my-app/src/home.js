@@ -18,7 +18,7 @@ import VideoText from "./componentes/video/text";
         <div className="sectionprincipal">
         <h1 style={{textAlign:"center", color:"indigo"}}>Olá!</h1>
         
-        <img className="robotPrincipal"src={mascota}/>
+        <img className="robotPrincipal"src={mascota} alt="cursoimg" />
         
            
           
@@ -35,7 +35,7 @@ import VideoText from "./componentes/video/text";
            
             <div>
             </div>
-            <img className="robot"src={mascota}/>
+            <img className="robot"src={mascota} alt="cursoimg" />
           </div>
           <div className="textofinal">
             <h3> Voçe Sabia?</h3>
@@ -43,7 +43,7 @@ import VideoText from "./componentes/video/text";
             <p>Porque  Vale a pena ensinar Programação às criançãs,a continuação 5 razões:</p>
              <ol>
             
-            <br />
+            
              <li>Estimula a criatividade: a programação é um ótimo estímulo ao potencial criativo das crianças, uma eficaz ferramenta que os incentiva, de maneira divertida, a explorarem suas capacidades.</li> 
              
              <li>Melhora o raciocínio lógico: transformar crianças em criadoras de tecnologias exercita e incentiva a habilidade de encontrar respostas, por meio de pensamentos coerentes.</li>

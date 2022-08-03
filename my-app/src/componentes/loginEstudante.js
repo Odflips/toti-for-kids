@@ -73,7 +73,7 @@ const LoginEstudante =() =>{
                 <h1 className="titulo">Sign in</h1>
                
                 <p className="subtitulo">Transforme o Mundo</p>
-                <img className="robotPrincipal"src={mascota}/>
+                <img className="robotForm"src={mascota} alt="cursoimg" />
              
               </div>
               
@@ -130,9 +130,9 @@ const LoginEstudante =() =>{
              
                 
                  
-               <p>Esqueceu sua Senha?</p>
+               <p className="esq">Esqueceu sua Senha?</p>
 
-                <p className="criar-conta"> Não tem uma conta? <Link to="/cadastroEstudante"><b>Inscrever-se agora</b></Link></p>
+                <p className="esq"> Não tem uma conta? <Link to="/cadastroEstudante"><b>Inscrever-se agora</b></Link></p>
                   
               
                  
