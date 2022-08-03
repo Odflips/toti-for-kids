@@ -4,6 +4,7 @@ import FormEstudantes from "./administrador-estudantes/formEstudantes";
 import Footer from "./footer";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
+import mascota from '../assets/img/mascota.png';
 
 
 
@@ -38,17 +39,22 @@ const [estudante, setEstudante] = useState({
           
           <div className='container mt-5'>
                 <div className='row'>
-                    <div className='col-7'>
-                        <h2 style={{ textAlign: "center" }}>Alunos Cadastrados</h2>
-                        <ListEstudantes setEstudante={setEstudante} estudante={estudante} estudantes={estudantes}  setEstudanteUpdated={setEstudanteUpdated} />
-
-                    </div>
                     <div className='col-5'>
                         <h2 style={{ textAlign: "center" }}>Atualizar informações dos Alunos</h2>
                         <FormEstudantes estudante={estudante} setEstudante={setEstudante} />
                     </div>
-                    
+                    <div className='col-7'>
+                        <img className="robotForm" src={mascota} alt="cursoimg" />
+                    </div>    
                 </div>
+                    <div className='mb-5'>
+                        <h2 style={{ textAlign: "center" }}>Alunos Cadastrados</h2>
+                        <ListEstudantes setEstudante={setEstudante} estudante={estudante} estudantes={estudantes}  setEstudanteUpdated={setEstudanteUpdated} />
+
+                    </div>
+                   
+                    
+                
             </div>
         <Button className='btn btn-secodary'><Link to='/card'> Voltar</Link></Button>
         <Footer />

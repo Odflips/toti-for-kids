@@ -4,6 +4,7 @@ import FormProfessor from './administrador-professores/formProfessor';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Footer from './footer';
+import mascota from '../assets/img/mascota.png';
 
 
 
@@ -41,17 +42,20 @@ function AdministradorProfessor() {
 
             <div className='container mt-5'>
                 <div className='row'>
-                    <div className='col-7'>
-                        <h2 style={{ textAlign: "center" }}>Lista do Professores</h2>
-                        <ListProfessor setProfessor={setProfessor} professor={professor} professores={professores} setprofessorUpdated={setprofessorUpdated} />
-
-                    </div>
                     <div className='col-5'>
                         <h2 style={{ textAlign: "center" }}>Adicionar Professores</h2>
                         <FormProfessor professor={professor} setProfessor={setProfessor} />
                     </div>
-
+                    <div className='col-7'>
+                        <img className="robotForm" src={mascota} alt="cursoimg" />
+                    </div>  
                 </div>
+                    <div className='mb-5'>
+                        <h2 style={{ textAlign: "center" }}>Lista do Professores</h2>
+                        <ListProfessor setProfessor={setProfessor} professor={professor} professores={professores} setprofessorUpdated={setprofessorUpdated} />
+
+                    </div>
+                    
             </div>
             <Button className='btn btn-secodary'><Link to='/card'> Voltar</Link></Button>
             <Footer />
