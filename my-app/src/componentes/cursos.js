@@ -9,28 +9,28 @@ const Cursos =()=>{
         <div>
 
       
-        <h2 style={{textAlign:"center", marginTop:80}}>Currículo dos nossos cursos ao Vivo</h2>
+        <h2 style={{textAlign:"center", marginTop:80}}>VENHA APRENDER COM NÓS!</h2>
         <div className="cursos">
             
           <div className="cursos1">
-            <img className="cursoimg" src={curso1}/>
-            <h3 className="text">Curso 1</h3>
-            <p className="text">Valor</p>
+            <img className="cursoimg" src={curso1} alt="cursoimg" />
+            <h3 className="text">FRONT-END BÁSICO</h3>
+            
           </div>
           <div className="cursos1">
-            <img className="cursoimg" src={curso2}/>
-            <h3 className="text">Curso 2</h3>
-            <p className="text">Valor</p>
+            <img className="cursoimg" src={curso2} alt="cursoimg" />
+            <h3 className="text">REACT NATIVE</h3>
+            
           </div>
           <div className="cursos1">
-            <img className="cursoimg" src={curso3}/>
-            <h3 className="text">Curso 3</h3>
-            <p className="text">Valor</p>
+            <img className="cursoimg" src={curso3} alt="cursoimg" />
+            <h3 className="text">BACK-END BÁSICO</h3>
+            
           </div>
           <div className="cursos1">
-            <img className="cursoimg" src={curso4}/>
-            <h3 className="text">Curso 4</h3>
-            <p className="text">Valor</p>
+            <img className="cursoimg" src={curso4} alt="cursoimg" />
+            <h3 className="text">DESENVOLVIMENTO MOBILE</h3>
+            
           </div>
         </div>
         </div>

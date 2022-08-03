@@ -48,8 +48,8 @@ const Router = () => {
             <Route exact path="/todosOsCursos" element={<TodosOsCursos/>} />
             <Route exact path="/meusCursos" element={<MeusCursos/>} />
 
-            
-            
+           
+      
    
 
             

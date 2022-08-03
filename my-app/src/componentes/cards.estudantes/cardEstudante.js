@@ -14,7 +14,7 @@ const CardEstudante =() => {
               
 
               <div className="img-container">
-                 <img className="img-card" src={MisCursos} alt='Professor'/>
+                 <img className="img-card" src={MisCursos} alt='MisCursos'/>
                  <h3>Meus Cursos</h3>
                  <div className="btn-card">
                  <button><Link to='/meusCursos'> Ver Mais</Link></button>

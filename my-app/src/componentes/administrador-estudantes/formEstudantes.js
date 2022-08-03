@@ -1,7 +1,13 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import { useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import axios from "axios"
 
-const FormEstudantes = ({ estudante, setEstudante }) => {
+const FormEstudantes = ({estudante,setEstudante}) => {
+
+
+          
 
     const changeHandler = e => {
         setEstudante({
@@ -11,18 +17,19 @@ const FormEstudantes = ({ estudante, setEstudante }) => {
 
     }
 
-    let { nome,usuario, email,senha,resenha} = estudante
+  let { nome,usuario, email,senha,resenha} = estudante
 
    
 
 
     return (
+
         <form >
             <div className='mb-4'>
                 <label htmlFor='nomeEstu'
                 className='form-label'>Nome </label>
                 <input 
-                value={ nome} 
+                value={nome} 
                 name='nome' 
                 onChange={changeHandler} 
                 type='text' 
@@ -72,7 +79,7 @@ const FormEstudantes = ({ estudante, setEstudante }) => {
                 className='form-control' />
             </div>
             
-          
+          <Button > Salvar</Button>
         </form>
     );
 }

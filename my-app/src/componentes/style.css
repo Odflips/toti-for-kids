@@ -19,7 +19,7 @@ body{
     border-radius: 8px;
     box-shadow: 0 10px 12px rgba(125, 14, 168, 0.219);
     padding: 24px 32px 32px 32px;
-    margin:  30px auto;
+    margin-left: 40px;
   
     color: darkslategray;
    
@@ -34,7 +34,7 @@ body{
     border-radius: 8px;
     box-shadow: 0 10px 12px rgba(125, 14, 168, 0.219);
     padding: 24px 32px 32px 32px;
-    margin:  30px auto;
+    margin-left:   40px;
   
     color: darkslategray;
   }
@@ -46,7 +46,7 @@ body{
     border-radius: 8px;
     box-shadow: 0 10px 12px rgba(125, 14, 168, 0.219);
     padding: 24px 32px 32px 32px;
-    margin:  30px auto;
+    margin-left:  40px;
   
     color: darkslategray;
 
@@ -214,6 +214,10 @@ body{
     margin-top: 100px;
   }
 
+  .robotForm{
+    height: 200px;
+  }
+
   @media screen and (max-width: 800px){
 
     .bodyLoginE{
@@ -233,29 +237,40 @@ body{
 
       height: 500px;
       width: 350px;
-      margin-left: -45px;
+      margin-left: 50px;
+
 
       
       
     }
 
     .loginE2{
-      margin-left: -16px;
+      margin-left: 100px;
       width: 350px;
     
     }
+    .loginE h1{
+      font-size: 25px;
+    }
+
+    .robotForm{
+      height: 100px;
+    }
 
     .esq{
-      margin-left: -100px;
+      margin-left: 30px;
       
     }
 
     .loginE3{
-      margin-left: -98px;
+      margin-left: -148px;
       width: 300px;
       height: 650px;
+
     
     }
+
+    
 
 
 
@@ -263,11 +278,11 @@ body{
 
 
     .loginBtn{
-      margin-left: -70px;
+      margin-left: -30px;
     }
     .loginBtn2{
       
-      margin-left:  -70px;
+      margin-left:  37px;
       
     }
 

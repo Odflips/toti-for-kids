@@ -19,7 +19,7 @@ const NavBar =() => {
 
     <header className="cabeçalho">
         <div className="Logo">
-          <img className="img" src={logo}/>
+          <img className="img" src={logo} alt="logo" />
         </div>
 
         <div className="login">

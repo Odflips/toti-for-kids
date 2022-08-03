@@ -63,7 +63,7 @@ const LoginProfessor = () =>{
                 <h1 className="titulo">Sign in</h1>
                
                 <p className="subtitulo">Transforme o Mundo</p>
-                <img className="robotPrincipal"src={mascota}/>
+                <img className="robotForm"src={mascota} alt="cursoimg" />
              
               </div>
               

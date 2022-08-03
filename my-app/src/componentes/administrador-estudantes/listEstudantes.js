@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 const ListEstudantes = ({ estudantes, setEstudanteUpdated, estudante, setEstudante }) => {
@@ -110,6 +111,8 @@ const ListEstudantes = ({ estudantes, setEstudanteUpdated, estudante, setEstudan
                         <td>
                             <div className='mb-3'>
                                 <button onClick={() => handleUpdate(estudantes.idEstudantes)} className='btn btn-dark'>Update</button>
+                               
+                                
                             </div>
                         </td>
                     </tr>
