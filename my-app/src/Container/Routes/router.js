@@ -3,6 +3,7 @@ import {
    BrowserRouter,
    Routes,
    Route,
+   
 
 
 } from "react-router-dom";
@@ -18,12 +19,15 @@ import Card from "../../componentes/card";
 import AdministradorCursos from "../../componentes/administradorCursos";
 import AdministradorEstudantes from "../../componentes/administradorEstudantes";
 import AdministradorProfessor from "../../componentes/administradorProfessor";
+import PerfilEstudante from "../../componentes/perfilEstudante";
+import RouteController from "./routerControlle";
 
 const Router = () => {
+   
    return (
       <BrowserRouter>
          <NavBar />
-         <Routes >
+         <Routes    >
 
             <Route exact path="/" element={<Home />} />
             <Route exact path="/professor" element={<LoginProfessor />} />
@@ -36,7 +40,11 @@ const Router = () => {
             <Route exact path="/administradorCursos" element={<AdministradorCursos />} />
             <Route exact path="/administradorEstudantes" element={<AdministradorEstudantes/>} />
             <Route exact path="/administradorProfessores" element={<AdministradorProfessor />} />
-             
+            <Route  exact path="/perfilEstudante"  element={<PerfilEstudante/>} render={props => <RouteController exact path="/perfilEstudante" component={PerfilEstudante} {...props}/>}/>
+            
+            
+            
+   
 
             
 

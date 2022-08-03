@@ -2,11 +2,17 @@ import { useState } from "react"
 import Swal from "sweetalert2"
 import axios from "axios"
 import { useParams } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
+
+
 
 export const useForm =(initialForm,validateForm)=>{
 
     const { id } = useParams()
-  
+
+        
+    let navigate = useNavigate();
+
     const[form,setForm]= useState(initialForm)
     const[errors,setErrors]= useState({})
     const[loading,setLoading]= useState(false)
@@ -14,8 +20,9 @@ export const useForm =(initialForm,validateForm)=>{
     
 
     const URLCADASTRO="http://localhost:3002/api/estudantes"
-    const URLoginE="http://localhost:3002/loginEstudantes"
-    const URLoginP= `http://localhost:3002/loginProfessors/${id}`
+    const URLoginE="http://localhost:3002/api/loginEstudantes"
+    const URLoginP= "http://localhost:3002/api/loginProfessor"
+    const URLoginA="http://localhost:3002/api/loginAdministrador"
 
     const handleChange =(e)=>{
         const {name,value}= e.target
@@ -45,10 +52,10 @@ export const useForm =(initialForm,validateForm)=>{
             fetch(URLCADASTRO, requestInit)
                 .then(res => res.text())
                 .then((res) => {
-                         
+                 
                 setLoading(false)
               setResponse(true)
-              console.log("deu certo")
+             
 
             })
             
@@ -64,15 +71,47 @@ export const useForm =(initialForm,validateForm)=>{
         }
     } 
 
-    const handleLoginEstudante = async (e) =>{
+    const handleLoginEstudante = (e) =>{
         e.preventDefault()
         setErrors(validateForm(form))
 
         if(Object.keys(errors).length === 0){
             
             
-            setLoading(true)
-            const requestInit = {
+          
+           axios.post(URLoginE,form)
+           .then(({data})=>{
+            localStorage.setItem("auth","yes") 
+                      console.log(data)
+                      navigate('/perfilEstudante')
+                      setLoading(false)
+                      setResponse(true)
+           })
+        
+        }
+    }
+//administrador
+const handleLoginAdministrador = (e) =>{
+    e.preventDefault()
+    setErrors(validateForm(form))
+
+    if(Object.keys(errors).length === 0){
+        
+        
+      
+       axios.post(URLoginA,form)
+       .then(({data})=>{
+        localStorage.setItem("auth","yes") 
+                  console.log(data)
+                  navigate('/card')
+                  setLoading(false)
+                  setResponse(true)
+       })
+    
+    }
+}
+
+            /*const requestInit = {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(form)
@@ -81,47 +120,42 @@ export const useForm =(initialForm,validateForm)=>{
             fetch(URLoginE, requestInit)
                 .then(res => res.text())
                 .then((res) => {
-                         
+                      localStorage.setItem("auth","yes") 
+                      console.log(res)
+                      navigate('/perfilEstudante')
                 setLoading(false)
               setResponse(true)
               
 
             })
+            .catch(({response})=>{
+                navigate('/estudante')
+                console.log(response.res)
+
+            })
             
-                
-
-        }else{
-            Swal.fire(
-                'error!',
-                'Problemas para accesar  a sua conta',
-                'error'
-              )
-
-        }
-    } 
-
-    const handleLoginProfessor = async (e) =>{
+        }*/
+   
+        
+    const handleLoginProfessor =  (e) =>{
         e.preventDefault()
         setErrors(validateForm(form))
 
         if(Object.keys(errors).length === 0){
             
             setLoading(true)
-            await axios.get(`${URLoginP}/${form.id}`)
-            .then((res)=>{
-              setLoading(false)
-              setResponse(true)
-            })
+            axios.post(URLoginP,form)
+            .then(({data})=>{
+                localStorage.setItem("auth","yes") 
+                          console.log(data)
+                          navigate('/dashboardProf')
+                          setLoading(false)
+                          setResponse(true)
 
-        }else{
-            Swal.fire(
-                'error!',
-                'Problemas para accesar  a sua conta',
-                'error'
-              )
-
-        }
-    } 
+                        })
+    
+                    }
+                }
     
    return{
     form,
@@ -132,7 +166,8 @@ export const useForm =(initialForm,validateForm)=>{
     handleBlur,
     handleSubmit,
     handleLoginEstudante,
-    handleLoginProfessor
+    handleLoginProfessor,
+    handleLoginAdministrador
    }
 
 }

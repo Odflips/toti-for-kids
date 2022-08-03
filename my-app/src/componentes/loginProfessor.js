@@ -108,23 +108,10 @@ const LoginProfessor = () =>{
                {errors.senha && <p style={style}>{errors.senha}</p>}
                <br/>
 
-               <FormGroup className="mb-2">
-                 <FormControl 
-                   className="input"
-                  type="text"
-                  name="curso"
-                 placeholder="curso"
-                 onBlur={handleBlur}
-                onChange={handleChange}
-                value={form.curso}
-                 required
-                />
-                </FormGroup>
-                {errors.curso && <p style={style}>{errors.curso}</p>}
-
+               
                 <br />
                <button  className="loginBtn2">
-               <Link to="/dashboardProf">Fazer Login </Link> 
+                Fazer Login 
                </button>
                <p className="esq">Esqueceu sua Senha?</p>
            </form>

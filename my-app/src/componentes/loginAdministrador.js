@@ -13,16 +13,15 @@ const LoginAdministrador =() =>{
 
   const [login, setLogin] = useState({usuario:'', senha:''});
 
-  const inputLogin = ({ target }) => {
-    const { name, value } = target
-    setLogin({
-      ...login,
-      [name]:value
-    })
-  }
+
+  const{form,
+    errors,
+    handleChange,
+    handleBlur,
+    handleLoginAdministrador}= useForm(initialForm,validationsForm)
+
   
 
-  const onSubmit = () => {
 
     axios.post('http://localhost:3002/api/validacion', login)
       .then(({ data }) => {
@@ -54,7 +53,8 @@ const LoginAdministrador =() =>{
           
              
              
-             <form className="sem-conta" >
+
+             <form className="sem-conta" onSubmit={handleLoginAdministrador}>
              
 
                 <FormGroup className="mb-2 ">
@@ -89,10 +89,10 @@ const LoginAdministrador =() =>{
                </FormGroup>
                
                <br/>
-               <button onClick={onSubmit} className="loginBtn">
-                <Link to="/card">Fazer Login </Link> 
-               </button>
-               <p>Esqueceu sua Senha?</p>
+
+               <button  className="loginBtn">
+              Fazer Login 
+
 
                 
               

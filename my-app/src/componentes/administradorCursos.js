@@ -39,7 +39,7 @@ function AdministradorCursos() {
     return (
         <Fragment>
           
-            <div className='container'>
+            <div className='container mt-5'>
                 <div className='row'>
                     <div className='col-7'>
                         <h2 style={{ textAlign: "center" }}>Cursos Disponíveis</h2>

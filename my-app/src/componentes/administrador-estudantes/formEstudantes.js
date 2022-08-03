@@ -11,91 +11,68 @@ const FormEstudantes = ({ estudante, setEstudante }) => {
 
     }
 
-    let { nome,usuario, email, curso} = estudante
+    let { nome,usuario, email,senha,resenha} = estudante
 
-    const onSubmit = () => {
-        //validacion de los inputs
-     
-        if (nome === '' || usuario === '' || email === '' || curso ==='') {
-            alert('Toda la informacion es obligatoria')
-            return
-        }
-        //consulta
-        const requestInit = {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(estudante)
-        }
-
-        fetch('http://localhost:3002/api/estudantes', requestInit)
-            .then(res => res.text())
-            .then((res) => {
-                     
-                    Swal.fire(
-                      'adicionado!',
-                      'A informação  foi adicionada com sucesso!',
-                      'success'
-                    )
-                    })  
-           
-               
-
-
-        //reiniciar el state
-        setEstudante({
-            nome: '',
-            usuario: '',
-            email: '',
-            curso:''
-
-        })
-
-    }
+   
 
 
     return (
-        <form onSubmit={onSubmit}>
+        <form >
             <div className='mb-4'>
-                <label htmlFor='nomeCourse' className='form-label'>Nome do Aluno</label>
+                <label htmlFor='nomeEstu'
+                className='form-label'>Nome </label>
                 <input 
                 value={ nome} 
                 name='nome' 
                 onChange={changeHandler} 
                 type='text' 
-                id='nomeCourse' 
+                id='nomeEstu' 
                 className='form-control' />
             </div>
             <div className='mb-4'>
-                <label htmlFor='duracaoCourse' className='form-label'>Usuario</label>
+                <label htmlFor='usuarioEstu' className='form-label'>Usuario</label>
                 <input
                  value={usuario } 
                  name='usuario' 
                  onChange={changeHandler} 
                  type='text'
-                  id='duracaoCourse'
+                  id='usuarioEstu'
                  className='form-control' />
             </div>
             <div className='mb-4'>
-                <label htmlFor='detalhesCourse' className='form-label'>email do Aluno</label>
+                <label htmlFor='emailEstu' className='form-label'>Email </label>
                 <input 
                 value={email} 
                 name='email' 
                 onChange={changeHandler} 
                 type='text' 
-                id='detalhesCourse' 
+                id='emailEstu' 
                 className='form-control' />
             </div>
+            
             <div className='mb-4'>
-                <label htmlFor='priceCourse' className='form-label'>Cursos do Aluno</label>
+                <label htmlFor='senhaEstu' className='form-label'>Senha</label>
                 <input 
-                value={curso} 
-                name='course' 
-                onChange={changeHandler}
-                 type='text' 
-                 id='priceCourse' 
-                 className='form-control' />
+                value={senha} 
+                name='senha' 
+                onChange={changeHandler} 
+                type='text' 
+                id='senhaEstu' 
+                className='form-control' />
             </div>
-            <button type='submit' className='btn btn-primary'>Submit</button>
+            
+            <div className='mb-4'>
+                <label htmlFor='resenhaEstu' className='form-label'>Confirmação da senha</label>
+                <input 
+                value={resenha} 
+                name='resenha' 
+                onChange={changeHandler} 
+                type='text' 
+                id='resenhaEstu' 
+                className='form-control' />
+            </div>
+            
+          
         </form>
     );
 }

@@ -36,15 +36,15 @@ const [estudante, setEstudante] = useState({
 
         <Fragment>
           
-          <div className='container'>
+          <div className='container mt-5'>
                 <div className='row'>
                     <div className='col-7'>
-                        <h2 style={{ textAlign: "center" }}>Cursos Disponíveis</h2>
+                        <h2 style={{ textAlign: "center" }}>Alunos Cadastrados</h2>
                         <ListEstudantes setEstudante={setEstudante} estudante={estudante} estudantes={estudantes}  setEstudanteUpdated={setEstudanteUpdated} />
 
                     </div>
                     <div className='col-5'>
-                        <h2 style={{ textAlign: "center" }}>Adicionar Cursos</h2>
+                        <h2 style={{ textAlign: "center" }}>Atualizar informações dos Alunos</h2>
                         <FormEstudantes estudante={estudante} setEstudante={setEstudante} />
                     </div>
                     

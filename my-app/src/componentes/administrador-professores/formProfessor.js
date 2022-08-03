@@ -68,7 +68,7 @@ const FormProfessor = ({ professor, setProfessor }) => {
                 <input value={senha} name='senha' onChange={changeHandler} type='text' id='senhaProfessor' className='form-control' />
             </div>
             <div className='mb-4'>
-                <label htmlFor='idprofessorcourse' className='form-label'>Price do Curso</label>
+                <label htmlFor='idprofessorcourse' className='form-label'> ID Cursos</label>
                 <input value={id_courses} name='id_courses' onChange={changeHandler} type='number' id='idprofessorcourse' className='form-control' />
             </div>
             <button type='submit' className='btn btn-primary'>Submit</button>
