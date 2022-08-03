@@ -91,7 +91,7 @@ const LoginAdministrador =() =>{
                <br/>
 
                <button  className="loginBtn">
-              Fazer Login 
+              Fazer Login </button>
 
 
                 
