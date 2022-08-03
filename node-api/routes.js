@@ -166,8 +166,95 @@ routes.put('/professores/:idProfessor', (req, res) => {
 
 
 
-///VALIDACAO------
+///VALIDACAO ESTUDANTES------
 
+routes.post('/loginEstudantes',(req,res)=>{
+    const {usuario,senha} = req.body
+    const values = [usuario,senha]
+    req.getConnection((err, conn) => {
+        if (err) return res.send(err)
+
+        conn.query('SELECT  * FROM estudantes WHERE usuario = ? AND senha = ?', values,(err,result) => {
+            if (err){
+                return res.send(err)
+            } else{
+                
+              if(result.length > 0){
+                res.status(200).send({
+                    "id":result[0].id,
+                    "usuario":result[0].usuario,
+                    "nome":result[0].nome
+                })
+               } else {
+                res.status(400).send('usuario no existe')
+            }
+          }
+        })
+    })
+})
+
+//--Validacao PROFESSORES
+routes.post('/loginProfessor',(req,res)=>{
+    const {usuario,senha} = req.body
+    const values = [usuario,senha]
+    req.getConnection((err, conn) => {
+        if (err) return res.send(err)
+
+        conn.query('SELECT  * FROM professores WHERE usuario = ? AND senha = ?', values,(err,result) => {
+            if (err){
+                return res.send(err)
+            } else{
+                
+              if(result.length > 0){
+                res.status(200).send({
+                    "id":result[0].id,
+                    "usuario":result[0].usuario,
+                    "nome":result[0].nome
+                })
+               } else {
+                res.status(400).send('professor no existe')
+            }
+          }
+        })
+    })
+})
+//-----VALIDAÇÃO ADMINISTRADORES
+routes.post('/loginAdministrador',(req,res)=>{
+    const {usuario,senha} = req.body
+    const values = [usuario,senha]
+    req.getConnection((err, conn) => {
+        if (err) return res.send(err)
+
+        conn.query('SELECT  * FROM administradores WHERE usuario = ? AND senha = ?', values,(err,result) => {
+            if (err){
+                return res.send(err)
+            } else{
+                
+              if(result.length > 0){
+                res.status(200).send({
+                    "id":result[0].id,
+                    "usuario":result[0].usuario,
+                    "nome":result[0].nome
+                })
+               } else {
+                res.status(400).send('administrador no existe')
+            }
+          }
+        })
+    })
+})
+//--consulta de nome 
+
+routes.get('/estudanteLog', (req, res) => {
+    req.getConnection((err, conn) => {
+        if (err) return res.send(err)
+        conn.query('SELECT nome FROM estudantes WHERE idEstudantes = ?',  [req.body, req.params.idEstudantes],(err,rows) => {
+            if (err) return res.send(err)
+            res.send(rows)
+
+        })
+    })
+})
  
 module.exports = routes
 
