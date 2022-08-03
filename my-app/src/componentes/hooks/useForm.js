@@ -83,7 +83,7 @@ export const useForm =(initialForm,validateForm)=>{
            .then(({data})=>{
             localStorage.setItem("auth","yes") 
                       console.log(data)
-                      navigate('/perfilEstudante')
+                      navigate('/cardEstudante')
                       setLoading(false)
                       setResponse(true)
            })
@@ -111,31 +111,7 @@ const handleLoginAdministrador = (e) =>{
     }
 }
 
-            /*const requestInit = {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(form)
-            }
-    
-            fetch(URLoginE, requestInit)
-                .then(res => res.text())
-                .then((res) => {
-                      localStorage.setItem("auth","yes") 
-                      console.log(res)
-                      navigate('/perfilEstudante')
-                setLoading(false)
-              setResponse(true)
-              
-
-            })
-            .catch(({response})=>{
-                navigate('/estudante')
-                console.log(response.res)
-
-            })
             
-        }*/
-   
         
     const handleLoginProfessor =  (e) =>{
         e.preventDefault()
@@ -143,7 +119,7 @@ const handleLoginAdministrador = (e) =>{
 
         if(Object.keys(errors).length === 0){
             
-            setLoading(true)
+         
             axios.post(URLoginP,form)
             .then(({data})=>{
                 localStorage.setItem("auth","yes") 

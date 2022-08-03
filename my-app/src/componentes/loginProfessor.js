@@ -3,7 +3,6 @@ import "./style.css"
 import "./App.css"
 import Footer from "./footer"
 import { Container,FormGroup,FormControl } from "react-bootstrap"
-import { Link } from "react-router-dom"
 import { useForm } from "./hooks/useForm"
 import mascota from "../assets/img/mascota.png"
 
@@ -12,7 +11,7 @@ const initialForm ={
 
   usuario:"",
   senha:"",
-  curso:""
+
   
 }
 
@@ -34,9 +33,7 @@ if(!form.senha.trim()){
   errors.senha = "A sua senha pode conter somente 8 caracteres"
 
  }
- if(!form.curso.trim()){
-  errors.curso = "O Campo curso é requerido"
-}
+
  
  return errors
 }
