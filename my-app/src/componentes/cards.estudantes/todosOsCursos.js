@@ -65,13 +65,11 @@ const TodosOsCursos = () => {
 
   console.log(OnAdd)
   return (
-
     <div>
       <div>
         <h1>Seja Bem Vindo!</h1>
 
       </div>
-      
       <table className='table'>
         <thead>
           <tr>
@@ -86,7 +84,6 @@ const TodosOsCursos = () => {
         <tbody>
           
           {detalhes_courses.map(course => (
-            <form onSubmit={OnAdd}>
             <tr key={course.idCourse}>
               <td>{course.idCourse}</td>
               <td>{course.nome}</td>
@@ -97,15 +94,13 @@ const TodosOsCursos = () => {
               
               <td>
                 <div className='mb-3'>
-                  <button  className='btn btn-dark'>ADD</button>
+                  <button onClick={OnAdd} className='btn btn-dark'>ADD</button>
                 </div>
               </td>
             </tr>
-             </form>
           ))}
         </tbody>
-        </table>
-     
+      </table>
     </div>
   )
 }
