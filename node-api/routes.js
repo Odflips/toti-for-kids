@@ -67,6 +67,8 @@ routes.get('/estudantes', (req, res) => {
     })
 })
 
+
+
 routes.post('/estudantes', (req, res) => {
     req.getConnection((err, conn) => {
         if (err) return res.send(err)
@@ -167,7 +169,7 @@ routes.put('/professores/:idProfessor', (req, res) => {
 
 
 
-//--Validacao PROFESSORES
+//--Validacao Estudantes
 routes.post('/loginEstudantes',(req,res)=>{
     const {usuario,senha} = req.body
     const values = [usuario,senha]
