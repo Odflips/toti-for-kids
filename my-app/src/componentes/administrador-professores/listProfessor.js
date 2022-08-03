@@ -1,24 +1,50 @@
 import React from 'react'
+import Swal from 'sweetalert2'
 
-const ListProfessor = ({ professores, setprofessorUpdated, professor,setProfessor}) => {
+const ListProfessor = ({ professores, setprofessorUpdated, professor, setProfessor }) => {
 
     const handleDelete = idProfessor => {
 
-        const requestInit = {
-            method: 'DELETE',
-        }
+        Swal.fire({
+            title: 'Tem certeza, que deseja eliminar o registro ',
+            text: 'Você não será capaz de reverter isso!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#218838',
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'Sim,Apagar!'
 
-        fetch('http://localhost:3002/api/professores/' + idProfessor, requestInit)
-            .then(res => res.text())
-            .then(res => console.log(res))
+        }).then((result) => {
 
-        setprofessorUpdated(true)
-        
+            if (result.isConfirmed) {
+
+
+                const requestInit = {
+                    method: 'DELETE',
+                }
+
+                fetch('http://localhost:3002/api/professores/' + idProfessor, requestInit)
+                    .then(res => res.text())
+                    .then((res) => {
+
+                        Swal.fire(
+                            'Eliminado!',
+                            'O registro foi eliminado !',
+                            'success'
+                        )
+                    })
+
+                setprofessorUpdated(true)
+
+            }
+        })
     }
+
 
     let { nome, usuario, senha, id_courses } = professor
     const handleUpdate = idProfessor => {
-      
+
 
         //validacion de los inputs
         id_courses = parseInt(id_courses)
@@ -35,7 +61,7 @@ const ListProfessor = ({ professores, setprofessorUpdated, professor,setProfesso
         fetch('http://localhost:3002/api/professores/' + idProfessor, requestInit)
             .then(res => res.text())
             .then(res => console.log(res))
-        
+
         //reiniciar el state
         setProfessor({
             nome: '',
@@ -47,7 +73,7 @@ const ListProfessor = ({ professores, setprofessorUpdated, professor,setProfesso
         setprofessorUpdated(true)
     }
 
-    
+
 
     return (
         <table className='table'>

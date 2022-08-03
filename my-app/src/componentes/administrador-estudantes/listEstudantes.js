@@ -13,7 +13,7 @@ const ListEstudantes = ({ estudantes, setEstudanteUpdated, estudante, setEstudan
         confirmButtonColor: '#218838',
         cancelButtonColor: '#d33',
         cancelButtonText: 'Cancelar',
-        confirmButtonText: 'sim,Apagar!'
+        confirmButtonText: 'Sim,Apagar!'
         
       }).then((result) => {
          

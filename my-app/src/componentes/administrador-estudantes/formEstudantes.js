@@ -77,7 +77,7 @@ const FormEstudantes = ({estudante,setEstudante}) => {
                 className='form-control' />
             </div>
             
-          <Button > Salvar</Button>
+         
         </form>
     );
 }
