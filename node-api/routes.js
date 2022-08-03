@@ -166,8 +166,40 @@ routes.put('/professores/:idProfessor', (req, res) => {
 
 
 
-///VALIDACAO------
+//login--
+routes.post('/login', (req, res) => {
+    const{usuario,senha}=req.body
+    const values = [usuario, senha]
+    
+    req.getConnection((err, conn) => {
+        if (err) return res.send(err)
 
+        conn.query('SELECT * FROM administrador WHERE usuario=? AND senha=?', [values], (err, rows) => {
+            if (err) {
+                res.status(500).send(err)
+            } else {
+                if (result.length > 0) {
+                    res.status(200).send(result[0])
+                } else {
+                    res.status(400).send('Usuario nao encontrado')
+                }
+            }
+
+        })
+    })
+})
+
+routes.post('/validacion', (req, res) => {
+    req.getConnection((err, conn) => {
+        if (err) return res.send(err)
+
+        conn.query('SELECT * FROM administrador WHERE usuario=? AND senha=?', [req.body, req.params.usuario,req.params.senha], (err, rows) => {
+            if (err) return res.send(err)
+
+            res.send('administrador logeado')
+        })
+    })
+})
  
 module.exports = routes
 
