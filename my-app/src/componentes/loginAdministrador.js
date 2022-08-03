@@ -110,14 +110,10 @@ const LoginAdministrador =() =>{
                {errors.senha && <p style={style}>{errors.senha}</p>}
                <br/>
                <button  className="loginBtn">
-<<<<<<< HEAD
-              Fazer Login </button>
-
-=======
               Fazer Login 
                </button>
                <p>Esqueceu sua Senha?</p>
->>>>>>> da037e6d2537db66753fe0fa5dc9b6c975492a4a
+
 
                 
               
