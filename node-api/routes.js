@@ -245,18 +245,23 @@ routes.post('/loginAdministrador',(req,res)=>{
         })
     })
 })
-//--consulta de nome 
 
-routes.get('/estudanteLog', (req, res) => {
+//post de incricao
+
+
+routes.post('/inscricao', (req, res) => {
     req.getConnection((err, conn) => {
         if (err) return res.send(err)
-        conn.query('SELECT nome FROM estudantes WHERE idEstudantes = ?',  [req.body, req.params.idEstudantes],(err,rows) => {
+
+        conn.query('INSERT INTO inscricao set ?', [req.body], (err, rows) => {
             if (err) return res.send(err)
-            res.send(rows)
+
+            res.send('curso added')
 
         })
     })
 })
+
  
 module.exports = routes
 
