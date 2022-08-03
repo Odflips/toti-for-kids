@@ -132,7 +132,3 @@ const LoginAdministrador =() =>{
 }
 
         export default LoginAdministrador;
-        
-
-        
-   
