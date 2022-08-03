@@ -67,6 +67,8 @@ routes.get('/estudantes', (req, res) => {
     })
 })
 
+
+
 routes.post('/estudantes', (req, res) => {
     req.getConnection((err, conn) => {
         if (err) return res.send(err)
@@ -166,7 +168,32 @@ routes.put('/professores/:idProfessor', (req, res) => {
 
 
 
-//login--
+
+//--Validacao Estudantes
+routes.post('/loginEstudantes',(req,res)=>{
+    const {usuario,senha} = req.body
+    const values = [usuario,senha]
+    req.getConnection((err, conn) => {
+        if (err) return res.send(err)
+
+        conn.query('SELECT  * FROM estudantes WHERE usuario = ? AND senha = ?', values,(err,result) => {
+            if (err){
+                return res.send(err)
+            } else{
+                
+              if(result.length > 0){
+                res.status(200).send({
+                    "id":result[0].id,
+                    "usuario":result[0].usuario,
+                    "nome":result[0].nome
+                })
+               } else {
+                res.status(400).send('usuario no existe')
+            }
+          }
+        })
+    })
+})
 
 //--Validacao PROFESSORES
 routes.post('/loginProfessor',(req,res)=>{

@@ -1,19 +1,45 @@
 import React from 'react'
+import Swal from 'sweetalert2'
 
 const ListCourses = ({ detalhes_courses, setcourseUpdated, course,setCourse}) => {
 
     const handleDelete = idCourse => {
-
-        const requestInit = {
-            method: 'DELETE',
+        Swal.fire({
+            title: 'Tem certeza, que deseja eliminar o registro ',
+            text: 'Você não será capaz de reverter isso!',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#218838',
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'Cancelar',
+            confirmButtonText: 'sim,Apagar!'
+            
+          }).then((result) => {
+             
+            if(result.isConfirmed){ 
+                
+                const requestInit = {
+                method: 'DELETE',
+            }
+    
+            fetch('http://localhost:3002/api/detalhes_course/' + idCourse, requestInit)
+                .then(res => res.text())
+                .then((res) => {
+                    Swal.fire(
+                        'Eliminado!',
+                        'O registro foi eliminado !',
+                         'success'  
+                      )
+                     
+                })
+    
+            setcourseUpdated(true)
         }
+    
+    })
+}
 
-        fetch('http://localhost:3002/api/detalhes_course/' + idCourse, requestInit)
-            .then(res => res.text())
-            .then(res => console.log(res))
-
-        setcourseUpdated(true)
-    }
+       
 
     let { nome, duracao, detalhes, price } = course
     const handleUpdate = idCourse => {
@@ -83,6 +109,7 @@ const ListCourses = ({ detalhes_courses, setcourseUpdated, course,setCourse}) =>
             </tbody>
         </table>
     );
+
 }
 
 export default ListCourses;

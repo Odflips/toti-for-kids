@@ -1,20 +1,47 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 const ListEstudantes = ({ estudantes, setEstudanteUpdated, estudante, setEstudante }) => {
 
     const handleDelete = idEstudante => {
-
-        const requestInit = {
-            method: 'DELETE',
+         Swal.fire({
+        title: 'Tem certeza, que deseja eliminar o registro ',
+        text: 'Você não será capaz de reverter isso!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#218838',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'sim,Apagar!'
+        
+      }).then((result) => {
+         
+        if(result.isConfirmed){
+           
+            const requestInit = {
+                method: 'DELETE',
+            }
+    
+            fetch('http://localhost:3002/api/estudantes/' + idEstudante, requestInit)
+                .then(res => res.text())
+                .then((res) =>{
+                   
+                        Swal.fire(
+                          'Eliminado!',
+                          'O registro foi eliminado !',
+                           'success'  
+                        )
+                       
+                      
+                })
+    
+            setEstudanteUpdated(true)
         }
-
-        fetch('http://localhost:3002/api/estudantes/' + idEstudante, requestInit)
-            .then(res => res.text())
-            .then(res => console.log(res))
-
-        setEstudanteUpdated(true)
+    
+        })
     }
-
+        
     let { nome, usuario, email, senha, resenha } = estudante
     const handleUpdate = idEstudantes => {
 
@@ -84,6 +111,8 @@ const ListEstudantes = ({ estudantes, setEstudanteUpdated, estudante, setEstudan
                         <td>
                             <div className='mb-3'>
                                 <button onClick={() => handleUpdate(estudantes.idEstudantes)} className='btn btn-dark'>Update</button>
+                               
+                                
                             </div>
                         </td>
                     </tr>

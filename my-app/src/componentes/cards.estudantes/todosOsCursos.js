@@ -2,7 +2,7 @@ import React from "react"
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
-const PerfilEstudante =()=>{
+const TodosOsCursos =()=>{
     const navigate = useNavigate()
    return(
     <div>
@@ -14,4 +14,4 @@ const PerfilEstudante =()=>{
     </div>
    )
 }
-export default PerfilEstudante ;
+export default TodosOsCursos ;
