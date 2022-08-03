@@ -7,6 +7,8 @@ import { useForm } from "./hooks/useForm";
 import mascota from "../assets/img/mascota.png"
 import Swal from "sweetalert2";
 
+
+
 const initialForm ={
 
   usuario:"",
@@ -56,6 +58,9 @@ const LoginEstudante =() =>{
       fontWeight:"bold",
       color:"#dc3545",
     }
+    
+   
+  
 
     return (
         <div className="conteiner">
@@ -114,15 +119,17 @@ const LoginEstudante =() =>{
                {errors.senha && <p style={style}>{errors.senha}</p>}
                <br/>
                <button  className="loginBtn">
-                <Link to="/">Fazer Login </Link> 
+               Fazer Login
                </button>
                {loading && Swal.showLoading()}
                {response &&  Swal.fire(
-                    'Seja Bem vindo!',
-                    ' Aprenda com nós!',
+                    'Adicionado!',
+                    'O registro  foi adicionado con sucesso !',
                     'success'
-                  )
-                  }
+                  )}
+             
+                
+                 
                <p>Esqueceu sua Senha?</p>
 
                 <p className="criar-conta"> Não tem uma conta? <Link to="/cadastroEstudante"><b>Inscrever-se agora</b></Link></p>

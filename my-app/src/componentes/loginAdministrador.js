@@ -47,7 +47,7 @@ const LoginAdministrador =() =>{
     errors,
     handleChange,
     handleBlur,
-    handleLoginEstudante}= useForm(initialForm,validationsForm)
+    handleLoginAdministrador}= useForm(initialForm,validationsForm)
 
     let style={
       fontWeight:"bold",
@@ -73,7 +73,7 @@ const LoginAdministrador =() =>{
           
              
              
-             <form className="sem-conta" onSubmit={handleLoginEstudante}>
+             <form className="sem-conta" onSubmit={handleLoginAdministrador}>
              
 
                 <FormGroup className="mb-2 ">
@@ -111,7 +111,7 @@ const LoginAdministrador =() =>{
                {errors.senha && <p style={style}>{errors.senha}</p>}
                <br/>
                <button  className="loginBtn">
-                <Link to="/card">Fazer Login </Link> 
+              Fazer Login 
                </button>
                <p>Esqueceu sua Senha?</p>
 
