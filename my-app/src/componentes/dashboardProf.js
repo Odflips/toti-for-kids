@@ -4,10 +4,16 @@ import "./App.css"
 import Curso from '../assets/img/curso1.png';
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const DashboardProf= () => {
+    const navigate= useNavigate()
     return(
         <div className="dashP">
+               <Button onClick={()=>{
+         localStorage.clear("auth")
+         navigate('/professor')
+         }}>Logout</Button>
 
             <h1>Bem-vindo a Turma 1</h1>
             <div className="alunos">

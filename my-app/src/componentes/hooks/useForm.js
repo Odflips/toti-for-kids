@@ -8,7 +8,7 @@ import { useNavigate} from "react-router-dom";
 
 export const useForm =(initialForm,validateForm)=>{
 
-    const { id } = useParams()
+   // const { id } = useParams()
 
         
     let navigate = useNavigate();
@@ -81,8 +81,8 @@ export const useForm =(initialForm,validateForm)=>{
           
            axios.post(URLoginE,form)
            .then(({data})=>{
-            localStorage.setItem("auth","yes") 
-                      console.log(data)
+            localStorage.setItem("auth", data[0].idEstudantes) 
+                      console.log(data[0].idEstudantes)
                       navigate('/cardEstudante')
                       setLoading(false)
                       setResponse(true)
@@ -101,8 +101,8 @@ const handleLoginAdministrador = (e) =>{
       
        axios.post(URLoginA,form)
        .then(({data})=>{
-        localStorage.setItem("auth","yes") 
-                  console.log(data)
+        localStorage.setItem("auth", data[0].idAdministrador) 
+                      console.log(data[0].idAdministrador)
                   navigate('/card')
                   setLoading(false)
                   setResponse(true)
@@ -122,8 +122,8 @@ const handleLoginAdministrador = (e) =>{
          
             axios.post(URLoginP,form)
             .then(({data})=>{
-                localStorage.setItem("auth","yes") 
-                          console.log(data)
+                localStorage.setItem("auth", data[0].idProfessor) 
+                console.log(data[0].idProfessor)
                           navigate('/dashboardProf')
                           setLoading(false)
                           setResponse(true)
