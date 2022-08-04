@@ -65,7 +65,7 @@ const TodosOsCursos = () => {
 
   console.log(OnAdd)
   return (
-    <div>
+    <div className="main-cur">
       <div>
         <h1>Seja Bem Vindo!</h1>
 

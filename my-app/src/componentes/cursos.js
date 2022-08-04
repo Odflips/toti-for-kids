@@ -29,7 +29,7 @@ const Cursos =()=>{
           </div>
           <div className="cursos1">
             <img className="cursoimg" src={curso4} alt="cursoimg" />
-            <h3 className="text">DESENVOLVIMENTO MOBILE</h3>
+            <h3 className="text">UX/UI</h3>
             
           </div>
         </div>

@@ -8,8 +8,11 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  
 }
-
+.mt-5{
+  overflow: hidden;
+}
 .adm{
   text-decoration: none;
 }
@@ -479,10 +482,19 @@ h2{
   align-items: center;
 }
 
+.main-cur{
+  padding: 40px 60px;
+}
+
 
 
 
 @media screen and (max-width: 800px){
+
+  .main-cur{
+    padding: 50px 60px;
+    margin-left: 20px;
+  }
 
   th{
     display: block;

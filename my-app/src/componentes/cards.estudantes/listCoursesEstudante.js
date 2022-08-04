@@ -42,6 +42,7 @@ const ListCoursesEstudantes = ({ detalhes_courses, setcourseUpdated, course,setC
     
 
     return (
+        
         <table className='table'>
             <thead>
                 <tr>
