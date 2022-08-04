@@ -5,12 +5,20 @@ import Estudante from '../assets/img/Cursos1.gif';
 import Profesor from '../assets/img/Cursos2.gif';
 import Cursos from '../assets/img/Cursos3.gif';
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 
 
 const Card=() => {
+   const navigate = useNavigate()
+  
     return(
         <div>
+          <Button onClick={()=>{
+         localStorage.clear("auth")
+         navigate('/loginAdministrador')
+         }}>Logout</Button>
           <div className="Card-conteiner">
               <div className="img-container">
                  <img className="img-card" src={Estudante} alt='estudante'/>

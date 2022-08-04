@@ -4,12 +4,19 @@ import "../App.css"
 import MisCursos from '../../assets/img/Cursos4.gif';
 import Cursos from '../../assets/img/Cursos3.gif';
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 
 
 const CardEstudante =() => {
+   const navigate = useNavigate()
     return(
         <div>
+            <Button onClick={()=>{
+         localStorage.clear("auth")
+         navigate('/estudante')
+         }}>Logout</Button>
           <div className="Card-conteiner">
               
 
@@ -30,7 +37,7 @@ const CardEstudante =() => {
                  </div>
                 
               </div>
-
+           
          </div>
             
             <Footer />
