@@ -92,12 +92,12 @@ const ListProfessor = ({ professores, setprofessorUpdated, professor, setProfess
                         <td>{professor.usuario}</td>
                         <td>{professor.senha}</td>
                         <td>{professor.id_courses}</td>
-                        <td>
+                        <td className='btn-table2'>
                             <div className='mb-3'>
                                 <button onClick={() => handleDelete(professor.idProfessor)} className='btn btn-danger'>Delete</button>
                             </div>
                         </td>
-                        <td>
+                        <td className='btn-table'>
                             <div className='mb-3'>
                                 <button onClick={() => handleUpdate(professor.idProfessor)} className='btn btn-dark'>Update</button>
                             </div>

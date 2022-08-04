@@ -103,12 +103,12 @@ const ListEstudantes = ({ estudantes, setEstudanteUpdated, estudante, setEstudan
 
 
 
-                        <td>
+                        <td className='btn-table3'>
                             <div className='mb-3'>
                                 <button onClick={() => handleDelete(estudantes.idEstudantes)} className='btn btn-danger'>Delete</button>
                             </div>
                         </td>
-                        <td>
+                        <td className='btn-table4'>
                             <div className='mb-3'>
                                 <button onClick={() => handleUpdate(estudantes.idEstudantes)} className='btn btn-dark'>Update</button>
                                

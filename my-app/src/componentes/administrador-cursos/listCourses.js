@@ -94,12 +94,12 @@ const ListCourses = ({ detalhes_courses, setcourseUpdated, course,setCourse}) =>
                         <td>{course.duracao}</td>
                         <td>{course.detalhes}</td>
                         <td>{course.price}</td>
-                        <td>
+                        <td className='btn-table2'>
                             <div className='mb-3'>
                                 <button onClick={() => handleDelete(course.idCourse)} className='btn btn-danger'>Delete</button>
                             </div>
                         </td>
-                        <td>
+                        <td className='btn-table'>
                             <div className='mb-3'>
                                 <button onClick={() => handleUpdate(course.idCourse)} className='btn btn-dark'>Update</button>
                             </div>

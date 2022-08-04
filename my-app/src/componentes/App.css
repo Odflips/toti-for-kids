@@ -455,9 +455,110 @@ h2{
 
 }
 
+.btn-primary{
+  position: relative;
+  left: 630px;
+}
+
+.col-5 button {
+  position: relative;
+  left: 180px;
+}
+
+.col-7{
+  position: relative;
+  left: 300px;
+}
+
+.col-5{
+  position: relative;
+  left: 100px;
+}
+
+.row{
+  align-items: center;
+}
+
+
 
 
 @media screen and (max-width: 800px){
+
+  th{
+    display: block;
+  }
+
+  td{
+    display: block;
+  }
+
+  .btn-table{
+    position: relative;
+    left: 30px;
+    bottom: 71px;
+  }
+
+  .btn-table2{
+    position: relative;
+    left: -60px;
+
+  }
+
+  .btn-table3{
+    position: relative;
+    left: 20px;
+
+  }
+
+  .btn-table4{
+    position: relative;
+    left: 120px;
+    bottom: 71px;
+
+  }
+
+  .col-5 button{
+    left: 20px;
+
+  }
+
+  .mt-5{
+    width: 300px;
+    margin-left: 50px;
+  }
+
+  .btn-primary{
+    left: 160px;
+  }
+  
+  
+  .col-5{
+    margin-left: -240px;
+    width: 300px;
+  }
+  
+  .col-7{
+    display: none;
+  }
+
+  .mb-5{
+    margin-top: 20px;
+   
+  }
+
+  
+
+
+  .row{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .table{
+    display: flex;
+    flex-direction: row;
+  }
 
   .cabeçalho a{
     font-size: 15px;
@@ -596,7 +697,7 @@ h2{
   }
 
   .img-container{
-    margin-left: 27px;
+    margin-left: 36px;
   }
   
 }
