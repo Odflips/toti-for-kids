@@ -182,11 +182,7 @@ routes.post('/loginEstudantes',(req,res)=>{
             } else{
                 
               if(result.length > 0){
-                res.status(200).send({
-                    "id":result[0].id,
-                    "usuario":result[0].usuario,
-                    "nome":result[0].nome
-                })
+                res.json(result)
                } else {
                 res.status(400).send('usuario no existe')
             }
@@ -208,11 +204,7 @@ routes.post('/loginProfessor',(req,res)=>{
             } else{
                 
               if(result.length > 0){
-                res.status(200).send({
-                    "id":result[0].id,
-                    "usuario":result[0].usuario,
-                    "nome":result[0].nome
-                })
+                res.json(result)
                } else {
                 res.status(400).send('professor no existe')
             }
@@ -233,11 +225,7 @@ routes.post('/loginAdministrador',(req,res)=>{
             } else{
                 
               if(result.length > 0){
-                res.status(200).send({
-                    "id":result[0].id,
-                    "usuario":result[0].usuario,
-                    "nome":result[0].nome
-                })
+                res.json(result)
                } else {
                 res.status(400).send('administrador no existe')
             }
@@ -250,10 +238,16 @@ routes.post('/loginAdministrador',(req,res)=>{
 
 
 routes.post('/inscricao', (req, res) => {
+    const {idCourse} = req.body
+    const {idEstudantes} = req.body
+    console.log(req.body)
+
+
     req.getConnection((err, conn) => {
+        
         if (err) return res.send(err)
 
-        conn.query('INSERT INTO inscricao set ?', [req.body], (err, rows) => {
+        conn.query('INSERT INTO inscricao set ?', {id_courses:idCourse,id_estudantes:idEstudantes}, (err, rows) => {
             if (err) return res.send(err)
 
             res.send('curso added')
