@@ -255,7 +255,19 @@ routes.post('/inscricao', (req, res) => {
         })
     })
 })
+//--MEUS CURSOS
 
+routes.get('/meusCursos', (req, res) => {
+  
+    req.getConnection((err, conn) => {
+        if (err) return res.send(err)
+        conn.query('SELECT c.duracao AS duracao, a.nome AS nomeestudante, c.nome AS nomeCurso, c.detalhes AS detalhes FROM estudantes AS a INNER JOIN inscricao As b ON a.idEstudantes=b.id_estudantes INNER JOIN detalhes_courses AS c ON b.id_courses=c.idCourse ', (err, rows) => {
+            if (err) return res.send(err)
+            res.send(rows)
+          console.log(res)
+        })
+    })
+})
  
 module.exports = routes
 
