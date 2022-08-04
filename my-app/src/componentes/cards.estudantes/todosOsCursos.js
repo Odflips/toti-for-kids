@@ -31,6 +31,7 @@ console.log(detalhes_courses.idCourse)
 
  
   var idEstudantes=localStorage.getItem("auth")
+  
   console.log(idEstudantes)
   const [inscricao, setInscricao] = useState(0)
 
