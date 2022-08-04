@@ -11,9 +11,9 @@ const Footer = () =>{
 
         <div className="footer">
             
-             <a href="#"> <img className="soc-img" src={insta} alt="cursoimg" /></a>
-             <a href="#"> <img className="soc-img" src={face} alt="cursoimg" /></a>
-             <a href="#"> <img className="soc-img" src={whats} alt="cursoimg" /></a>
+             <a href="totiforkids.com.br"> <img className="soc-img" src={insta} alt="cursoimg" /></a>
+             <a href="totiforkids.com.br"> <img className="soc-img" src={face} alt="cursoimg" /></a>
+             <a href="totiforkids.com.br"> <img className="soc-img" src={whats} alt="cursoimg" /></a>
               <div className="text-foot" >
 
               <span>Toti For Kids</span>

@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import ListCourses from "../administrador-cursos/listCourses";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
@@ -33,7 +32,7 @@ console.log(detalhes_courses.idCourse)
   var idEstudantes=localStorage.getItem("auth")
   
   console.log(idEstudantes)
-  const [inscricao, setInscricao] = useState(0)
+  //const [inscricao, setInscricao] = useState(0)
 
   
   const OnAdd = (idCourse) => {
@@ -60,12 +59,12 @@ console.log(detalhes_courses.idCourse)
 
 
 
-    //reiniciar el state
+    /*reiniciar el state
     setInscricao({
       id_estudantes: '',
       id_courses: '',
       
-    })
+    })*/
 
   }
 

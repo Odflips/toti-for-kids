@@ -20,7 +20,6 @@ import AdministradorCursos from "../../componentes/administradorCursos";
 import AdministradorEstudantes from "../../componentes/administradorEstudantes";
 import AdministradorProfessor from "../../componentes/administradorProfessor";
 import PerfilEstudante from "../../componentes/cards.estudantes/perfi-MeusCursos";
-import RouteController from "./routerControlle";
 import CardEstudante from "../../componentes/cards.estudantes/cardEstudante";
 import MeusCursos from "../../componentes/cards.estudantes/perfi-MeusCursos";
 import TodosOsCursos from "../../componentes/cards.estudantes/todosOsCursos";
@@ -43,7 +42,7 @@ const Router = () => {
             <Route exact path="/administradorCursos" element={<AdministradorCursos />} />
             <Route exact path="/administradorEstudantes" element={<AdministradorEstudantes/>} />
             <Route exact path="/administradorProfessores" element={<AdministradorProfessor />} />
-            <Route  exact path="/perfilEstudante"  element={<PerfilEstudante/>} render={props => <RouteController exact path="/perfilEstudante" component={PerfilEstudante} {...props}/>}/>
+            <Route  exact path="/perfilEstudante"  element={<PerfilEstudante/>} />
             <Route exact path="/cardEstudante" element={<CardEstudante/>} />
             <Route exact path="/todosOsCursos" element={<TodosOsCursos/>} />
             <Route exact path="/meusCursos" element={<MeusCursos/>} />
