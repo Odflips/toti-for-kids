@@ -28,7 +28,7 @@ console.log(detalhes_courses.idCourse)
 
   const navigate = useNavigate()
   return (
-    <div>
+    <div className="main-cur">
       <div>
         <h1>Seja Bem Vindo!</h1>
 
