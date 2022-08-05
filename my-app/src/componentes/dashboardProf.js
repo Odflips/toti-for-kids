@@ -18,7 +18,7 @@ const DashboardProf= () => {
             <h1>Bem-vindo a Turma 1</h1>
             <div className="alunos">
             <div className="img-txt">
-                <img className="aluno-img" src={Curso}/>
+                <img className="aluno-img" src={Curso} alt="foto do aluno"/>
                 <h3>Nome do Aluno</h3>
                 <h3>E-mail</h3>
                 </div>
@@ -32,7 +32,7 @@ const DashboardProf= () => {
 
             <div className="alunos">
             <div className="img-txt">
-                <img className="aluno-img" src={Curso}/>
+                <img className="aluno-img" src={Curso} alt="foto do aluno"/>
                 <h3>Nome do Aluno</h3>
                 <h3>E-mail</h3>
                 </div>
@@ -46,7 +46,7 @@ const DashboardProf= () => {
 
             <div  className="alunos">
                 <div className="img-txt">
-                <img className="aluno-img"  src={Curso}/>
+                <img className="aluno-img"  src={Curso} alt="foto do aluno"/>
                 <h3>Nome do Aluno</h3>
                 <h3>E-mail</h3>
                 </div>

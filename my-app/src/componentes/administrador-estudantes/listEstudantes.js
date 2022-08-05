@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2'
 
 const ListEstudantes = ({ estudantes, setEstudanteUpdated, estudante, setEstudante }) => {
 
-    const handleDelete = idEstudante => {
+    const handleDelete = idEstudantes => {
          Swal.fire({
         title: 'Tem certeza, que deseja eliminar o registro ',
         text: 'Você não será capaz de reverter isso!',
@@ -23,7 +22,7 @@ const ListEstudantes = ({ estudantes, setEstudanteUpdated, estudante, setEstudan
                 method: 'DELETE',
             }
     
-            fetch('http://localhost:3002/api/estudantes/' + idEstudante, requestInit)
+            fetch('http://localhost:3002/api/estudantes/' + idEstudantes, requestInit)
                 .then(res => res.text())
                 .then((res) =>{
                    

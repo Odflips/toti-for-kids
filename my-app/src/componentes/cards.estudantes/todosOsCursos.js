@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import ListCourses from "../administrador-cursos/listCourses";
 import { Link } from "react-router-dom";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";

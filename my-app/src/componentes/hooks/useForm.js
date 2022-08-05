@@ -1,14 +1,13 @@
 import { useState } from "react"
 import Swal from "sweetalert2"
 import axios from "axios"
-import { useParams } from "react-router-dom";
 import { useNavigate} from "react-router-dom";
 
 
 
 export const useForm =(initialForm,validateForm)=>{
 
-   // const { id } = useParams()
+   
 
         
     let navigate = useNavigate();

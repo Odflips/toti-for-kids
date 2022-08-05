@@ -19,7 +19,7 @@ const initialForm = {
 const validationsForm = (form) => {
   let errors = {}
 
-  let regexUserName = /^(w+[/./-]?){1,}[A-Za-zÁáàãÉéêÍíÓóôÜü\s]+$/
+ 
   let regexpassword = /^.{1,8}$/
 
 
